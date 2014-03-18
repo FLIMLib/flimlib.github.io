@@ -12,3 +12,21 @@ body {
 .theme-showcase > p > .btn {
   margin: 5px 0;
 }
+
+.theme-showcase {
+  width: 850px;
+}
+
+/*
+.page-header {
+  padding-top: 1px;
+  padding-bottom: 1px;
+  border-bottom: 1px solid gray;
+}
+*/
+
+.img-thumbnail {
+  float: right;
+  margin-left: 10px;
+  width: 400px;
+}
