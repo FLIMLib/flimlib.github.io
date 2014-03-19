@@ -30,3 +30,10 @@ body {
   margin-left: 10px;
   width: 400px;
 }
+
+.logo {
+  float: left;
+  margin-top: 34px;
+  margin-right: 20px;
+  margin-bottom: 10px;
+}
