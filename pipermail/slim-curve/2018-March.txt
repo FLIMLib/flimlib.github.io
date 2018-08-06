@@ -1,0 +1,102 @@
+From e.mcghee at beatson.gla.ac.uk  Thu Mar  8 11:01:37 2018
+From: e.mcghee at beatson.gla.ac.uk (Ewan McGhee)
+Date: Thu, 8 Mar 2018 17:01:37 +0000
+Subject: [SLIM-Curve] file formats
+Message-ID: <D6C71CF1.148ED%e.mcghee@beatson.gla.ac.uk>
+
+Hi everyone,
+
+Hopefully this mail list is still active and is just not very busy.
+
+I came across the SLIM-Curve plugin for IMageJ/FII while looking up details of the Tri2 package as I have some FLIM data that I am having difficulty fitting.
+
+When I saw that a macro-compatible FLIM fitting plugin as available I thought that this could be the best thing since sliced bread, but the only problem is that my data is in OME-TIFF format (each time bin is stored as an image in a z-stack) and it does not seem to be compatible with SLIM-Curve.
+
+I was wondering if there is perhaps any chance that OME-TIFFs might be made a valid format? For example, the laser repetition frequency could be manually inputed and the  data order could be defined somehow.
+
+I don’t know how easy this would be to implement but it would be a real saviour.
+
+Cheers,
+
+Ewan
+
+—
+
+Dr Ewan McGhee
+
+Senior Scientific Officer
+Beatson Advanced Imaging Resource (BAIR)
+Beatson Institute for Cancer Research
+
+e.mcghee at beatson.gla.ac.uk
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://loci.wisc.edu/pipermail/slim-curve/attachments/20180308/cc447032/attachment.html>
+
+From eliceiri at wisc.edu  Thu Mar  8 11:20:36 2018
+From: eliceiri at wisc.edu (KEVIN W ELICEIRI)
+Date: Thu, 8 Mar 2018 17:20:36 +0000
+Subject: [SLIM-Curve] file formats
+In-Reply-To: <D6C71CF1.148ED%e.mcghee@beatson.gla.ac.uk>
+References: <D6C71CF1.148ED%e.mcghee@beatson.gla.ac.uk>
+Message-ID: <BLUPR0601MB7535805F740503E96CAD37FBADF0@BLUPR0601MB753.namprd06.prod.outlook.com>
+
+HI Ewan,
+
+I would recommend for now not using SLIM-Curve and instead using TRI-2. We have lots of work on SLIM-Curve and its very incomplete in scripting and other areas. We don't currently have someone working on supporting this so for real data best to use TRI2.
+
+
+best
+
+k
+
+
+
+Kevin W Eliceiri, PhD
+
+PI and Director
+
+Laboratory for Optical and Computational Instrumentation
+
+University of Wisconsin at Madison
+
+Investigator, Morgridge Institute for Research
+
+
+________________________________
+From: SLIM-Curve <slim-curve-bounces at imagej.net> on behalf of Ewan McGhee <e.mcghee at beatson.gla.ac.uk>
+Sent: Thursday, March 8, 2018 11:01:37 AM
+To: slim-curve at imagej.net
+Subject: Re: [SLIM-Curve] file formats
+
+Hi everyone,
+
+Hopefully this mail list is still active and is just not very busy.
+
+I came across the SLIM-Curve plugin for IMageJ/FII while looking up details of the Tri2 package as I have some FLIM data that I am having difficulty fitting.
+
+When I saw that a macro-compatible FLIM fitting plugin as available I thought that this could be the best thing since sliced bread, but the only problem is that my data is in OME-TIFF format (each time bin is stored as an image in a z-stack) and it does not seem to be compatible with SLIM-Curve.
+
+I was wondering if there is perhaps any chance that OME-TIFFs might be made a valid format? For example, the laser repetition frequency could be manually inputed and the  data order could be defined somehow.
+
+I don’t know how easy this would be to implement but it would be a real saviour.
+
+Cheers,
+
+Ewan
+
+—
+
+Dr Ewan McGhee
+
+Senior Scientific Officer
+Beatson Advanced Imaging Resource (BAIR)
+Beatson Institute for Cancer Research
+
+e.mcghee at beatson.gla.ac.uk
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://loci.wisc.edu/pipermail/slim-curve/attachments/20180308/bda7bbfa/attachment.html>
+

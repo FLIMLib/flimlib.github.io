@@ -1,0 +1,78 @@
+From ctrueden at wisc.edu  Thu Sep 24 11:38:55 2015
+From: ctrueden at wisc.edu (Curtis Rueden)
+Date: Thu, 24 Sep 2015 11:38:55 -0500
+Subject: [SLIM-Curve] SLIM Curve plugin - version on update site broken,
+	on github it's fine
+In-Reply-To: <5603AA24.9080304@mpi-cbg.de>
+References: <5603AA24.9080304@mpi-cbg.de>
+Message-ID: <CADN69ykmnatCmR0Of0TC2D_C5E3T7EwNppep7-5Cx-pUw0vbLA@mail.gmail.com>
+
+Hi Robert,
+
+[CCing slim-curve mailing list, because public discussion is better.]
+
+> FIJI freezes, when running the plugin as mentioned on its wiki page
+> (Click menu Analyse > Lifetime > SLIM Curve). So, the plugin is
+> unusable :(
+
+Thanks for the report. I was able to reproduce with a fully updated Fiji +
+SLIM-Curve update site.
+
+I fixed the problem [1], and uploaded the new version to the update site.
+
+> when I download the source from Github and compile it using Eclipse,
+> the plugin runs fine.
+
+Not sure what you mean by that, but I'm surprised that would make a
+difference. There was a legitimate deadlock issue in the code. The main
+mystery is why it ever worked at all prior to the latest version of ImageJ.
+
+Anyway, give it a try and let us know if this fix resolves the problem for
+you!
+
+Regards,
+Curtis
+
+[1]
+https://github.com/slim-curve/slim-plugin/commit/f452ad4b8411933450c8bd17d00eb84ac23de7e4
+
+On Thu, Sep 24, 2015 at 2:45 AM, Robert Haase <rhaase at mpi-cbg.de> wrote:
+
+> Hi SLIM Curve plugin maintainers,
+>
+> I've got a very simple issue with the SLIM curve plugin (
+> http://fiji.sc/SLIM_Curve):
+>
+> * I just downloaded it using the update site (
+> http://sites.imagej.net/SLIM-Curve/) in  a current version of FIJI
+> (ImageJ 2.0.0-rc-39/1.50b; Java 1.8.0_51) on MacOS 10.10.3
+>
+> * FIJI freezes, when running the plugin as mentioned on its wiki page
+> (Click menu Analyse > Lifetime > SLIM Curve). So, the plugin is unusable :(
+>
+> * However, when I download the source from Github and compile it using
+> Eclipse, the plugin runs fine.
+>
+> Could anybody of you please update the update site, so that the plugin
+> works again? It would be a pitty, if the plugin is lost because of nothing.
+>
+> If I can assist somehow, just let me know.
+>
+> Best,
+> Robert
+>
+> --
+> Robert Haase
+> Bio-Image informatics, Scientific Computing Facility
+>
+> Max Planck Institute CBG
+> Pfotenhauer Str. 108, 01307 Dresden
+> room: 106 (s)
+> phone: +49 351 210 2972
+> fax:   +49 351 210 1689
+>
+>
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://loci.wisc.edu/pipermail/slim-curve/attachments/20150924/b3f58b83/attachment.html>
+

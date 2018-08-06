@@ -1,0 +1,517 @@
+From ctrueden at wisc.edu  Mon Jun 29 13:57:47 2015
+From: ctrueden at wisc.edu (Curtis Rueden)
+Date: Mon, 29 Jun 2015 13:57:47 -0500
+Subject: [SLIM-Curve] sdt file reading error in SLIM curve
+In-Reply-To: <9D94EDC6E92A5C4D9493BBC3838134551C9E1877@HARVANDMBX03.fasmail.priv>
+References: <9D94EDC6E92A5C4D9493BBC3838134551C89AAD1@HARVANDMBX03.fasmail.priv>
+	<CADN69ymXiJOb+B8coLRK5umCDrx0Yjw9Z+SqUEXhD4MTjjxWAg@mail.gmail.com>
+	<9D94EDC6E92A5C4D9493BBC3838134551C9E1877@HARVANDMBX03.fasmail.priv>
+Message-ID: <CADN69y=-W-pTy5_riXTENshY2uXCt5JxqW7XVtVUm6PNHYFibQ@mail.gmail.com>
+
+Hi Doogie,
+
+> I am wondering whether you are working on it. Or you got in troubles.
+> If you have any suggestions such as converting sdt file into other
+> format, please let me know.
+
+I'm CCing the slim-curve mailing list, which is the best place to discuss
+these issues.
+
+Unfortunately, I have not had any significant time to work on the SDT
+issues. However, I did pass along your issue to Sagar (CCed), the current
+maintainer of the SLIM Curve plugin for ImageJ.
+
+Your image appears to be a FIFO image, which is currently not supported in
+ImageJ or SCIFIO. But Sagar is actively working on adding support for FIFO
+images to our software, since we have some of those here in our lab as well.
+
+Sagar, please let me know if you need any guidance or support on this
+project. Or if you have any workarounds that Doogie can use in the meantime.
+
+Regards,
+Curtis
+
+On Sat, Jun 27, 2015 at 11:00 PM, Oh, Doogie <doh at cgr.harvard.edu> wrote:
+
+>  Hi Curtis,
+>
+>
+>
+> I am wondering whether you are working on it. Or you got in troubles. If
+> you have any suggestions such as converting sdt file into other format,
+> please let me know.
+>
+>
+>
+> Regards,
+>
+> Doogie
+>
+>
+>
+> *From:* ctrueden.wisc at gmail.com [mailto:ctrueden.wisc at gmail.com] *On
+> Behalf Of *Curtis Rueden
+> *Sent:* Wednesday, April 22, 2015 2:03 PM
+> *To:* Oh, Doogie
+> *Cc:* slim-curve at imagej.net
+> *Subject:* Re: sdt file reading error in SLIM curve
+>
+>
+>
+> Hi Doogie,
+>
+>
+>
+> > Library not on path Unable to load library 'slim-curve-1.0-SNAPSHOT'
+>
+>
+>
+> Thanks for the bug report. I am able to reproduce this issue on my OS X
+> system.
+>
+>
+>
+> I will investigate further and reply back when there is a fix.
+>
+>
+>
+> Regards,
+>
+> Curtis
+>
+>
+>
+> On Fri, Apr 17, 2015 at 1:25 PM, Oh, Doogie <doh at cgr.harvard.edu> wrote:
+>
+>  Dear Curtis,
+>
+>
+>
+> I am trying to load sdt file, but couldn?t get the correct image. Could
+> you diagnose the problems? I attach the sdt file and the loading results.
+>
+>
+>
+> Best regards,
+>
+> Doogie Oh, Ph. D
+>
+> Department of Molecular and Cellular Biology
+>
+> Applied Physics
+>
+> Harvard University
+>
+> 52 Oxford st,
+>
+> Northwest lab building, Room 358
+>
+> Cambridge, MA
+>
+> 02138
+>
+>
+>
+>
+>
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://loci.wisc.edu/pipermail/slim-curve/attachments/20150629/f0382242/attachment.html>
+
+From abdul.kader.sagar at gmail.com  Mon Jun 29 14:14:45 2015
+From: abdul.kader.sagar at gmail.com (Abdul Kader Sagar)
+Date: Mon, 29 Jun 2015 14:14:45 -0500
+Subject: [SLIM-Curve] sdt file reading error in SLIM curve
+In-Reply-To: <CADN69y=-W-pTy5_riXTENshY2uXCt5JxqW7XVtVUm6PNHYFibQ@mail.gmail.com>
+References: <9D94EDC6E92A5C4D9493BBC3838134551C89AAD1@HARVANDMBX03.fasmail.priv>
+	<CADN69ymXiJOb+B8coLRK5umCDrx0Yjw9Z+SqUEXhD4MTjjxWAg@mail.gmail.com>
+	<9D94EDC6E92A5C4D9493BBC3838134551C9E1877@HARVANDMBX03.fasmail.priv>
+	<CADN69y=-W-pTy5_riXTENshY2uXCt5JxqW7XVtVUm6PNHYFibQ@mail.gmail.com>
+Message-ID: <CAG2JH+_-DrFxYQpJkYZoLKz8OjwWeZLjJSapWQ=Yn=njHDmosg@mail.gmail.com>
+
+Hi Curtis,
+
+For now the best workaround would be using SPCM to decompress the image. In
+FIFO mode, the images are compressed to save space, even though they are
+both *.SDT format.
+
+For converting(using SPCM), go to File-> Convert-> SDT Files
+
+In destination file format, select SDT unzipped(I have attached a
+screenshot for clarification). Let me know if this was helpful.
+
+Thanks
+
+Best regards,
+Md Abdul Kader Sagar
+
+Graduate Student
+*Department of Electrical and Computer Engineering*
+
+Research Assistant
+*Laboratory of Optical and Computational Instrumentation (LOCI)*
+
+*University of Wisconsin-Madison*
+
+LinkedIn: https://www.linkedin.com/in/aksagar
+Web: http://loci.wisc.edu/people/md-abdul-kader-sagar
+Cell: +1 608 572 9299
+*Email*: abdul.kader.sagar at gmail.com
+ msagar at wisc.edu
+
+On Mon, Jun 29, 2015 at 1:57 PM, Curtis Rueden < ctrueden at wisc.edu> wrote:
+
+> Hi Doogie,
+>
+> > I am wondering whether you are working on it. Or you got in troubles.
+> > If you have any suggestions such as converting sdt file into other
+> > format, please let me know.
+>
+> I'm CCing the slim-curve mailing list, which is the best place to discuss
+> these issues.
+>
+> Unfortunately, I have not had any significant time to work on the SDT
+> issues. However, I did pass along your issue to Sagar (CCed), the current
+> maintainer of the SLIM Curve plugin for ImageJ.
+>
+> Your image appears to be a FIFO image, which is currently not supported in
+> ImageJ or SCIFIO. But Sagar is actively working on adding support for FIFO
+> images to our software, since we have some of those here in our lab as well.
+>
+> Sagar, please let me know if you need any guidance or support on this
+> project. Or if you have any workarounds that Doogie can use in the meantime.
+>
+> Regards,
+> Curtis
+>
+> On Sat, Jun 27, 2015 at 11:00 PM, Oh, Doogie < doh at cgr.harvard.edu> wrote:
+>
+>>  Hi Curtis,
+>>
+>>
+>>
+>> I am wondering whether you are working on it. Or you got in troubles. If
+>> you have any suggestions such as converting sdt file into other format,
+>> please let me know.
+>>
+>>
+>>
+>> Regards,
+>>
+>> Doogie
+>>
+>>
+>>
+>> *From:*  ctrueden.wisc at gmail.com [mailto: ctrueden.wisc at gmail.com] *On
+>> Behalf Of *Curtis Rueden
+>> *Sent:* Wednesday, April 22, 2015 2:03 PM
+>> *To:* Oh, Doogie
+>> *Cc:*  slim-curve at imagej.net
+>> *Subject:* Re: sdt file reading error in SLIM curve
+>>
+>>
+>>
+>> Hi Doogie,
+>>
+>>
+>>
+>> > Library not on path Unable to load library 'slim-curve-1.0-SNAPSHOT'
+>>
+>>
+>>
+>> Thanks for the bug report. I am able to reproduce this issue on my OS X
+>> system.
+>>
+>>
+>>
+>> I will investigate further and reply back when there is a fix.
+>>
+>>
+>>
+>> Regards,
+>>
+>> Curtis
+>>
+>>
+>>
+>> On Fri, Apr 17, 2015 at 1:25 PM, Oh, Doogie < doh at cgr.harvard.edu> wrote:
+>>
+>>  Dear Curtis,
+>>
+>>
+>>
+>> I am trying to load sdt file, but couldn?t get the correct image. Could
+>> you diagnose the problems? I attach the sdt file and the loading results.
+>>
+>>
+>>
+>> Best regards,
+>>
+>> Doogie Oh, Ph. D
+>>
+>> Department of Molecular and Cellular Biology
+>>
+>> Applied Physics
+>>
+>> Harvard University
+>>
+>> 52 Oxford st,
+>>
+>> Northwest lab building, Room 358
+>>
+>> Cambridge, MA
+>>
+>> 02138
+>>
+>>
+>>
+>>
+>>
+>
+>
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://loci.wisc.edu/pipermail/slim-curve/attachments/20150629/8fa76ea0/attachment-0001.html>
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: Capture.JPG
+Type: image/jpeg
+Size: 71709 bytes
+Desc: not available
+URL: <http://loci.wisc.edu/pipermail/slim-curve/attachments/20150629/8fa76ea0/attachment-0001.jpe>
+
+From ctrueden at wisc.edu  Tue Jun 30 14:04:15 2015
+From: ctrueden at wisc.edu (Curtis Rueden)
+Date: Tue, 30 Jun 2015 14:04:15 -0500
+Subject: [SLIM-Curve] sdt file reading error in SLIM curve
+In-Reply-To: <9D94EDC6E92A5C4D9493BBC3838134551C9E3B86@HARVANDMBX03.fasmail.priv>
+References: <9D94EDC6E92A5C4D9493BBC3838134551C89AAD1@HARVANDMBX03.fasmail.priv>
+	<CADN69ymXiJOb+B8coLRK5umCDrx0Yjw9Z+SqUEXhD4MTjjxWAg@mail.gmail.com>
+	<9D94EDC6E92A5C4D9493BBC3838134551C9E1877@HARVANDMBX03.fasmail.priv>
+	<CADN69y=-W-pTy5_riXTENshY2uXCt5JxqW7XVtVUm6PNHYFibQ@mail.gmail.com>
+	<CAG2JH+_-DrFxYQpJkYZoLKz8OjwWeZLjJSapWQ=Yn=njHDmosg@mail.gmail.com>
+	<9D94EDC6E92A5C4D9493BBC3838134551C9E3B86@HARVANDMBX03.fasmail.priv>
+Message-ID: <CADN69y=7bEWU69OskF7FSY8pmgZg6WZH7tP4uFfo5Kx8_REnNg@mail.gmail.com>
+
+Hi Doogie,
+
+> It works.
+
+Great, glad to hear it.
+
+Regards,
+Curtis
+
+On Tue, Jun 30, 2015 at 1:52 PM, Oh, Doogie <doh at cgr.harvard.edu> wrote:
+
+>  Hi Abdul,
+>
+>
+>
+> It works.
+>
+> Thanks
+>
+>
+>
+> Doogie
+>
+>
+>
+> *From:* Abdul Kader Sagar [mailto:abdul.kader.sagar at gmail.com]
+> *Sent:* Monday, June 29, 2015 3:15 PM
+> *To:* Curtis Rueden
+> *Cc:* Oh, Doogie; slim-curve at imagej.net
+>
+> *Subject:* Re: sdt file reading error in SLIM curve
+>
+>
+>
+> Hi Curtis,
+>
+>
+>
+> For now the best workaround would be using SPCM to decompress the image.
+> In FIFO mode, the images are compressed to save space, even though they are
+> both *.SDT format.
+>
+>
+>
+> For converting(using SPCM), go to File-> Convert-> SDT Files
+>
+>
+>
+> In destination file format, select SDT unzipped(I have attached a
+> screenshot for clarification). Let me know if this was helpful.
+>
+>
+>
+> Thanks
+>
+>
+>     Best regards,
+>
+> Md Abdul Kader Sagar
+>
+>
+>
+> Graduate Student
+> *Department of Electrical and Computer Engineering*
+>
+>
+>
+> Research Assistant
+>
+> *Laboratory of Optical and Computational Instrumentation (LOCI)*
+>
+>
+>
+> *University of Wisconsin-Madison*
+>
+>
+>
+> LinkedIn: https://www.linkedin.com/in/aksagar
+> <https://urldefense.proofpoint.com/v2/url?u=https-3A__www.linkedin.com_in_aksagar&d=BQMFaQ&c=WO-RGvefibhHBZq3fL85hQ&r=EjWRw7WikK8RBbnVnPcDS_stCYeOYvqzfywQwv_FTEo&m=3RGvMo2Wd57bUwZEZbx2JiGs9KAK2rhBghobdZVlCms&s=upmcgGT85yHFDn8Fp8QCJtaj6-eMQ0FdQDis1wCrzRM&e=>
+>
+> Web: http://loci.wisc.edu/people/md-abdul-kader-sagar
+> <https://urldefense.proofpoint.com/v2/url?u=http-3A__loci.wisc.edu_people_md-2Dabdul-2Dkader-2Dsagar&d=BQMFaQ&c=WO-RGvefibhHBZq3fL85hQ&r=EjWRw7WikK8RBbnVnPcDS_stCYeOYvqzfywQwv_FTEo&m=3RGvMo2Wd57bUwZEZbx2JiGs9KAK2rhBghobdZVlCms&s=903P6b6QCuRVvSnnImj0PaHYhaB_7VFg6ZiguVjSutk&e=>
+> Cell: +1 608 572 9299
+> *Email*: abdul.kader.sagar at gmail.com
+>  msagar at wisc.edu
+>
+>
+>
+> On Mon, Jun 29, 2015 at 1:57 PM, Curtis Rueden < ctrueden at wisc.edu> wrote:
+>
+>  Hi Doogie,
+>
+>
+>
+> > I am wondering whether you are working on it. Or you got in troubles.
+>
+> > If you have any suggestions such as converting sdt file into other
+>
+> > format, please let me know.
+>
+>
+>
+> I'm CCing the slim-curve mailing list, which is the best place to discuss
+> these issues.
+>
+>
+>
+> Unfortunately, I have not had any significant time to work on the SDT
+> issues. However, I did pass along your issue to Sagar (CCed), the current
+> maintainer of the SLIM Curve plugin for ImageJ.
+>
+>
+>
+> Your image appears to be a FIFO image, which is currently not supported in
+> ImageJ or SCIFIO. But Sagar is actively working on adding support for FIFO
+> images to our software, since we have some of those here in our lab as well.
+>
+>
+>
+> Sagar, please let me know if you need any guidance or support on this
+> project. Or if you have any workarounds that Doogie can use in the meantime.
+>
+>
+>
+> Regards,
+>
+> Curtis
+>
+>
+>
+> On Sat, Jun 27, 2015 at 11:00 PM, Oh, Doogie < doh at cgr.harvard.edu> wrote:
+>
+>  Hi Curtis,
+>
+>
+>
+> I am wondering whether you are working on it. Or you got in troubles. If
+> you have any suggestions such as converting sdt file into other format,
+> please let me know.
+>
+>
+>
+> Regards,
+>
+> Doogie
+>
+>
+>
+> *From:*  ctrueden.wisc at gmail.com [mailto: ctrueden.wisc at gmail.com] *On
+> Behalf Of *Curtis Rueden
+> *Sent:* Wednesday, April 22, 2015 2:03 PM
+> *To:* Oh, Doogie
+> *Cc:*  slim-curve at imagej.net
+> *Subject:* Re: sdt file reading error in SLIM curve
+>
+>
+>
+> Hi Doogie,
+>
+>
+>
+> > Library not on path Unable to load library 'slim-curve-1.0-SNAPSHOT'
+>
+>
+>
+> Thanks for the bug report. I am able to reproduce this issue on my OS X
+> system.
+>
+>
+>
+> I will investigate further and reply back when there is a fix.
+>
+>
+>
+> Regards,
+>
+> Curtis
+>
+>
+>
+> On Fri, Apr 17, 2015 at 1:25 PM, Oh, Doogie < doh at cgr.harvard.edu> wrote:
+>
+>  Dear Curtis,
+>
+>
+>
+> I am trying to load sdt file, but couldn?t get the correct image. Could
+> you diagnose the problems? I attach the sdt file and the loading results.
+>
+>
+>
+> Best regards,
+>
+> Doogie Oh, Ph. D
+>
+> Department of Molecular and Cellular Biology
+>
+> Applied Physics
+>
+> Harvard University
+>
+> 52 Oxford st,
+>
+> Northwest lab building, Room 358
+>
+> Cambridge, MA
+>
+> 02138
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://loci.wisc.edu/pipermail/slim-curve/attachments/20150630/88d1ff15/attachment.html>
+

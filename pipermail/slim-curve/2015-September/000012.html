@@ -1,0 +1,124 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [SLIM-Curve] SLIM Curve plugin - version on update site broken,	on github it's fine
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:slim-curve%40imagej.net?Subject=Re%3A%20%5BSLIM-Curve%5D%20SLIM%20Curve%20plugin%20-%20version%20on%20update%20site%20broken%2C%0A%09on%20github%20it%27s%20fine&In-Reply-To=%3CCADN69ykmnatCmR0Of0TC2D_C5E3T7EwNppep7-5Cx-pUw0vbLA%40mail.gmail.com%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   
+   
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[SLIM-Curve] SLIM Curve plugin - version on update site broken,	on github it's fine</H1>
+    <B>Curtis Rueden</B> 
+    <A HREF="mailto:slim-curve%40imagej.net?Subject=Re%3A%20%5BSLIM-Curve%5D%20SLIM%20Curve%20plugin%20-%20version%20on%20update%20site%20broken%2C%0A%09on%20github%20it%27s%20fine&In-Reply-To=%3CCADN69ykmnatCmR0Of0TC2D_C5E3T7EwNppep7-5Cx-pUw0vbLA%40mail.gmail.com%3E"
+       TITLE="[SLIM-Curve] SLIM Curve plugin - version on update site broken,	on github it's fine">ctrueden at wisc.edu
+       </A><BR>
+    <I>Thu Sep 24 11:38:55 CDT 2015</I>
+    <P><UL>
+        
+        
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#12">[ date ]</a>
+              <a href="thread.html#12">[ thread ]</a>
+              <a href="subject.html#12">[ subject ]</a>
+              <a href="author.html#12">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hi Robert,
+
+[CCing slim-curve mailing list, because public discussion is better.]
+
+&gt;<i> FIJI freezes, when running the plugin as mentioned on its wiki page
+</I>&gt;<i> (Click menu Analyse &gt; Lifetime &gt; SLIM Curve). So, the plugin is
+</I>&gt;<i> unusable :(
+</I>
+Thanks for the report. I was able to reproduce with a fully updated Fiji +
+SLIM-Curve update site.
+
+I fixed the problem [1], and uploaded the new version to the update site.
+
+&gt;<i> when I download the source from Github and compile it using Eclipse,
+</I>&gt;<i> the plugin runs fine.
+</I>
+Not sure what you mean by that, but I'm surprised that would make a
+difference. There was a legitimate deadlock issue in the code. The main
+mystery is why it ever worked at all prior to the latest version of ImageJ.
+
+Anyway, give it a try and let us know if this fix resolves the problem for
+you!
+
+Regards,
+Curtis
+
+[1]
+<A HREF="https://github.com/slim-curve/slim-plugin/commit/f452ad4b8411933450c8bd17d00eb84ac23de7e4">https://github.com/slim-curve/slim-plugin/commit/f452ad4b8411933450c8bd17d00eb84ac23de7e4</A>
+
+On Thu, Sep 24, 2015 at 2:45 AM, Robert Haase &lt;<A HREF="http://loci.wisc.edu/mailman/listinfo/slim-curve">rhaase at mpi-cbg.de</A>&gt; wrote:
+
+&gt;<i> Hi SLIM Curve plugin maintainers,
+</I>&gt;<i>
+</I>&gt;<i> I've got a very simple issue with the SLIM curve plugin (
+</I>&gt;<i> <A HREF="http://fiji.sc/SLIM_Curve">http://fiji.sc/SLIM_Curve</A>):
+</I>&gt;<i>
+</I>&gt;<i> * I just downloaded it using the update site (
+</I>&gt;<i> <A HREF="http://sites.imagej.net/SLIM-Curve/">http://sites.imagej.net/SLIM-Curve/</A>) in  a current version of FIJI
+</I>&gt;<i> (ImageJ 2.0.0-rc-39/1.50b; Java 1.8.0_51) on MacOS 10.10.3
+</I>&gt;<i>
+</I>&gt;<i> * FIJI freezes, when running the plugin as mentioned on its wiki page
+</I>&gt;<i> (Click menu Analyse &gt; Lifetime &gt; SLIM Curve). So, the plugin is unusable :(
+</I>&gt;<i>
+</I>&gt;<i> * However, when I download the source from Github and compile it using
+</I>&gt;<i> Eclipse, the plugin runs fine.
+</I>&gt;<i>
+</I>&gt;<i> Could anybody of you please update the update site, so that the plugin
+</I>&gt;<i> works again? It would be a pitty, if the plugin is lost because of nothing.
+</I>&gt;<i>
+</I>&gt;<i> If I can assist somehow, just let me know.
+</I>&gt;<i>
+</I>&gt;<i> Best,
+</I>&gt;<i> Robert
+</I>&gt;<i>
+</I>&gt;<i> --
+</I>&gt;<i> Robert Haase
+</I>&gt;<i> Bio-Image informatics, Scientific Computing Facility
+</I>&gt;<i>
+</I>&gt;<i> Max Planck Institute CBG
+</I>&gt;<i> Pfotenhauer Str. 108, 01307 Dresden
+</I>&gt;<i> room: 106 (s)
+</I>&gt;<i> phone: +49 351 210 2972
+</I>&gt;<i> fax:   +49 351 210 1689
+</I>&gt;<i>
+</I>&gt;<i>
+</I>-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: &lt;<A HREF="http://loci.wisc.edu/pipermail/slim-curve/attachments/20150924/b3f58b83/attachment.html">http://loci.wisc.edu/pipermail/slim-curve/attachments/20150924/b3f58b83/attachment.html</A>&gt;
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	
+	
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#12">[ date ]</a>
+              <a href="thread.html#12">[ thread ]</a>
+              <a href="subject.html#12">[ subject ]</a>
+              <a href="author.html#12">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://loci.wisc.edu/mailman/listinfo/slim-curve">More information about the SLIM-Curve
+mailing list</a><br>
+</body></html>

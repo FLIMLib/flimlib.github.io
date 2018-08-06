@@ -1,0 +1,650 @@
+From abdul.kader.sagar at gmail.com  Thu Aug 14 00:06:26 2014
+From: abdul.kader.sagar at gmail.com (Abdul Kader Sagar)
+Date: Thu, 14 Aug 2014 00:06:26 -0500
+Subject: [SLIM-Curve] Slim plugin giving error every time
+Message-ID: <CAG2JH+_tmGNEoNTE2J4bCUokS7wUxdTY1b=yaYCZEZT0i6Q96g@mail.gmail.com>
+
+Hi all,
+
+I have been trying to load sdt files using the slim plugin. But I am
+getting error everytime. I tested in 2 windows PC and 1 Mac. They result in
+the same error.
+
+
+
+java.lang.IllegalArgumentException: Invalid service:
+net.imagej.legacy.LegacyAppEventService
+at
+org.scijava.service.ServiceHelper.createExactService(ServiceHelper.java:280)
+ at org.scijava.service.ServiceHelper.loadService(ServiceHelper.java:231)
+at org.scijava.service.ServiceHelper.loadService(ServiceHelper.java:194)
+ at org.scijava.service.ServiceHelper.loadServices(ServiceHelper.java:166)
+at org.scijava.Context.<init>(Context.java:244)
+ at org.scijava.Context.<init>(Context.java:203)
+at org.scijava.Context.<init>(Context.java:142)
+ at org.scijava.Context.<init>(Context.java:128)
+at io.scif.img.AbstractImgIOComponent.<init>(AbstractImgIOComponent.java:57)
+ at io.scif.img.ImgOpener.<init>(ImgOpener.java:94)
+at loci.slim.SLIMProcessor.loadImage(SLIMProcessor.java:1390)
+ at loci.slim.SLIMProcessor.loadImage(SLIMProcessor.java:1382)
+at loci.slim.SLIMProcessor.process(SLIMProcessor.java:277)
+ at loci.slim.SLIM_PlugIn.run(SLIM_PlugIn.java:45)
+at ij.IJ.runUserPlugIn(IJ.java:202)
+at ij.IJ.runPlugIn(IJ.java:166)
+ at ij.Executer.runCommand(Executer.java:131)
+at ij.Executer.run(Executer.java:64)
+at java.lang.Thread.run(Thread.java:662)
+Caused by: java.lang.IllegalArgumentException: Invalid service:
+net.imagej.legacy.DefaultLegacyService
+at
+org.scijava.service.ServiceHelper.createExactService(ServiceHelper.java:280)
+ at org.scijava.service.ServiceHelper.loadService(ServiceHelper.java:231)
+at
+org.scijava.service.ServiceHelper.createServiceRecursively(ServiceHelper.java:340)
+ at
+org.scijava.service.ServiceHelper.createExactService(ServiceHelper.java:269)
+... 18 more
+Caused by: java.lang.UnsupportedOperationException: Cannot instantiate more
+than one DefaultLegacyService
+ at
+net.imagej.legacy.DefaultLegacyService.checkInstance(DefaultLegacyService.java:599)
+at
+net.imagej.legacy.DefaultLegacyService.initialize(DefaultLegacyService.java:404)
+ at
+org.scijava.service.ServiceHelper.createServiceRecursively(ServiceHelper.java:353)
+at
+org.scijava.service.ServiceHelper.createExactService(ServiceHelper.java:269)
+ ... 21 more
+Caused by: java.lang.Throwable: Initialized here:
+at
+net.imagej.legacy.DefaultLegacyService.initialize(DefaultLegacyService.java:422)
+ at
+org.scijava.service.ServiceHelper.createServiceRecursively(ServiceHelper.java:353)
+at
+org.scijava.service.ServiceHelper.createExactService(ServiceHelper.java:269)
+ at org.scijava.service.ServiceHelper.loadService(ServiceHelper.java:231)
+at
+org.scijava.service.ServiceHelper.createServiceRecursively(ServiceHelper.java:340)
+ at
+org.scijava.service.ServiceHelper.createExactService(ServiceHelper.java:269)
+at org.scijava.service.ServiceHelper.loadService(ServiceHelper.java:231)
+ at org.scijava.service.ServiceHelper.loadService(ServiceHelper.java:194)
+at org.scijava.service.ServiceHelper.loadServices(ServiceHelper.java:166)
+ at org.scijava.Context.<init>(Context.java:244)
+at org.scijava.Context.<init>(Context.java:203)
+ at org.scijava.Context.<init>(Context.java:142)
+at org.scijava.Context.<init>(Context.java:98)
+ at org.scijava.Context.<init>(Context.java:86)
+at net.imagej.ImageJ.<init>(ImageJ.java:82)
+ at net.imagej.Main.launch(Main.java:61)
+at net.imagej.Main.main(Main.java:73)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+ at
+sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+at
+sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+ at java.lang.reflect.Method.invoke(Method.java:597)
+at net.imagej.launcher.ClassLauncher.launch(ClassLauncher.java:258)
+ at net.imagej.launcher.ClassLauncher.run(ClassLauncher.java:184)
+at net.imagej.launcher.ClassLauncher.main(ClassLauncher.java:76)
+
+
+
+
+
+
+Best regards,
+Md Abdul Kader Sagar
+
+Graduate Student
+*Department of Electrical and Computer Engineering*
+
+Research Assistant
+*Laboratory of Optical and Computational Instrumentation (LOCI)*
+
+*University of Wisconsin-Madison*
+
+LinkedIn: https://www.linkedin.com/in/aksagar
+Cell: +1 608 572 9299
+*Email*:abdul.kader.sagar at gmail.com
+msagar at wisc.edu
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://loci.wisc.edu/pipermail/slim-curve/attachments/20140814/0aea339f/attachment.html>
+
+From eliceiri at wisc.edu  Thu Aug 14 07:03:01 2014
+From: eliceiri at wisc.edu (Kevin W Eliceiri)
+Date: Thu, 14 Aug 2014 07:03:01 -0500
+Subject: [SLIM-Curve] Slim plugin giving error every time
+In-Reply-To: <CAG2JH+_tmGNEoNTE2J4bCUokS7wUxdTY1b=yaYCZEZT0i6Q96g@mail.gmail.com>
+References: <CAG2JH+_tmGNEoNTE2J4bCUokS7wUxdTY1b=yaYCZEZT0i6Q96g@mail.gmail.com>
+Message-ID: <7700ee1f90f3f.53ec5f25@wiscmail.wisc.edu>
+
+thanks Sagar, perhaps Curtis can point you in right direction with this at our meeting todaybest
+k
+
+On 08/14/14, Abdul Kader Sagar  wrote:
+> Hi all,
+> 
+> I have been trying to load sdt files using the slim plugin. But I am getting error everytime. I tested in 2 windows PC and 1 Mac. They result in the same error.
+> 
+> 
+> 
+> 
+> 
+> 
+> java.lang.IllegalArgumentException: Invalid service: net.imagej.legacy.LegacyAppEventService
+> at org.scijava.service.ServiceHelper.createExactService(ServiceHelper.java:280)
+> at org.scijava.service.ServiceHelper.loadService(ServiceHelper.java:231)
+> at org.scijava.service.ServiceHelper.loadService(ServiceHelper.java:194)
+> at org.scijava.service.ServiceHelper.loadServices(ServiceHelper.java:166)
+> at org.scijava.Context.<init>(Context.java:244)
+> at org.scijava.Context.<init>(Context.java:203)
+> at org.scijava.Context.<init>(Context.java:142)
+> at org.scijava.Context.<init>(Context.java:128)
+> at io.scif.img.AbstractImgIOComponent.<init>(AbstractImgIOComponent.java:57)
+> at io.scif.img.ImgOpener.<init>(ImgOpener.java:94)
+> at loci.slim.SLIMProcessor.loadImage(SLIMProcessor.java:1390)
+> at loci.slim.SLIMProcessor.loadImage(SLIMProcessor.java:1382)
+> at loci.slim.SLIMProcessor.process(SLIMProcessor.java:277)
+> at loci.slim.SLIM_PlugIn.run(SLIM_PlugIn.java:45)
+> at ij.IJ.runUserPlugIn(IJ.java:202)
+> at ij.IJ.runPlugIn(IJ.java:166)
+> at ij.Executer.runCommand(Executer.java:131)
+> at ij.Executer.run(Executer.java:64)
+> at java.lang.Thread.run(Thread.java:662)
+> Caused by: java.lang.IllegalArgumentException: Invalid service: net.imagej.legacy.DefaultLegacyService
+> at org.scijava.service.ServiceHelper.createExactService(ServiceHelper.java:280)
+> at org.scijava.service.ServiceHelper.loadService(ServiceHelper.java:231)
+> at org.scijava.service.ServiceHelper.createServiceRecursively(ServiceHelper.java:340)
+> at org.scijava.service.ServiceHelper.createExactService(ServiceHelper.java:269)
+> ... 18 more
+> Caused by: java.lang.UnsupportedOperationException: Cannot instantiate more than one DefaultLegacyService
+> at net.imagej.legacy.DefaultLegacyService.checkInstance(DefaultLegacyService.java:599)
+> at net.imagej.legacy.DefaultLegacyService.initialize(DefaultLegacyService.java:404)
+> at org.scijava.service.ServiceHelper.createServiceRecursively(ServiceHelper.java:353)
+> at org.scijava.service.ServiceHelper.createExactService(ServiceHelper.java:269)
+> ... 21 more
+> Caused by: java.lang.Throwable: Initialized here:
+> at net.imagej.legacy.DefaultLegacyService.initialize(DefaultLegacyService.java:422)
+> at org.scijava.service.ServiceHelper.createServiceRecursively(ServiceHelper.java:353)
+> at org.scijava.service.ServiceHelper.createExactService(ServiceHelper.java:269)
+> at org.scijava.service.ServiceHelper.loadService(ServiceHelper.java:231)
+> at org.scijava.service.ServiceHelper.createServiceRecursively(ServiceHelper.java:340)
+> at org.scijava.service.ServiceHelper.createExactService(ServiceHelper.java:269)
+> at org.scijava.service.ServiceHelper.loadService(ServiceHelper.java:231)
+> at org.scijava.service.ServiceHelper.loadService(ServiceHelper.java:194)
+> at org.scijava.service.ServiceHelper.loadServices(ServiceHelper.java:166)
+> at org.scijava.Context.<init>(Context.java:244)
+> at org.scijava.Context.<init>(Context.java:203)
+> at org.scijava.Context.<init>(Context.java:142)
+> at org.scijava.Context.<init>(Context.java:98)
+> at org.scijava.Context.<init>(Context.java:86)
+> at net.imagej.ImageJ.<init>(ImageJ.java:82)
+> at net.imagej.Main.launch(Main.java:61)
+> at net.imagej.Main.main(Main.java:73)
+> at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+> at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+> at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+> at java.lang.reflect.Method.invoke(Method.java:597)
+> at net.imagej.launcher.ClassLauncher.launch(ClassLauncher.java:258)
+> at net.imagej.launcher.ClassLauncher.run(ClassLauncher.java:184)
+> at net.imagej.launcher.ClassLauncher.main(ClassLauncher.java:76)
+> 
+> 
+> 
+> 
+> 
+> 
+> 
+> 
+> 
+> 
+> 
+> Best regards,
+> Md Abdul Kader Sagar
+> 
+> Graduate Student
+> Department of Electrical and Computer Engineering
+> 
+> 
+> Research Assistant 
+> Laboratory of Optical and Computational Instrumentation (LOCI)
+> 
+> 
+> University of Wisconsin-Madison
+> 
+> 
+> LinkedIn:?https://www.linkedin.com/in/aksagar
+> Cell: +1 608 572 9299
+> Email:abdul.kader.sagar at gmail.com(javascript:main.compose()
+> msagar at wisc.edu(javascript:main.compose()
+
+--
+Kevin W. Eliceiri
+Director,?Laboratory for Optical and Computational Instrumentation (LOCI)
+Departments Cell and Molecular Biology and Biomedical Engineering
+Affiliate Principal Investigator, Morgridge Institute for Research (MIR)
+Room 271 Animal Sciences,?1675 Observatory Drive,?Madison, WI 53706
+Phone: 608-263-6288
+
+
+From ctrueden at wisc.edu  Thu Aug 14 16:08:12 2014
+From: ctrueden at wisc.edu (Curtis Rueden)
+Date: Thu, 14 Aug 2014 16:08:12 -0500
+Subject: [SLIM-Curve] Slim plugin giving error every time
+In-Reply-To: <7700ee1f90f3f.53ec5f25@wiscmail.wisc.edu>
+References: <CAG2JH+_tmGNEoNTE2J4bCUokS7wUxdTY1b=yaYCZEZT0i6Q96g@mail.gmail.com>
+	<7700ee1f90f3f.53ec5f25@wiscmail.wisc.edu>
+Message-ID: <CADN69ynJN2iymoOirnRV56D8XeT3hmtaJV28o03-x2s5apFK2A@mail.gmail.com>
+
+Hi all,
+
+> java.lang.IllegalArgumentException: Invalid service:
+> net.imagej.legacy.LegacyAppEventService
+
+Just a quick note that we fixed the problem earlier today:
+https://github.com/slim-curve/slim-plugin/commit/4c19324650c3e515f1d34f90985c727aa5ae2969
+
+Regards,
+Curtis
+
+
+On Thu, Aug 14, 2014 at 7:03 AM, Kevin W Eliceiri <eliceiri at wisc.edu> wrote:
+
+> thanks Sagar, perhaps Curtis can point you in right direction with this at
+> our meeting todaybest
+> k
+>
+> On 08/14/14, Abdul Kader Sagar  wrote:
+> > Hi all,
+> >
+> > I have been trying to load sdt files using the slim plugin. But I am
+> getting error everytime. I tested in 2 windows PC and 1 Mac. They result in
+> the same error.
+> >
+> >
+> >
+> >
+> >
+> >
+> > java.lang.IllegalArgumentException: Invalid service:
+> net.imagej.legacy.LegacyAppEventService
+> > at
+> org.scijava.service.ServiceHelper.createExactService(ServiceHelper.java:280)
+> > at org.scijava.service.ServiceHelper.loadService(ServiceHelper.java:231)
+> > at org.scijava.service.ServiceHelper.loadService(ServiceHelper.java:194)
+> > at org.scijava.service.ServiceHelper.loadServices(ServiceHelper.java:166)
+> > at org.scijava.Context.<init>(Context.java:244)
+> > at org.scijava.Context.<init>(Context.java:203)
+> > at org.scijava.Context.<init>(Context.java:142)
+> > at org.scijava.Context.<init>(Context.java:128)
+> > at
+> io.scif.img.AbstractImgIOComponent.<init>(AbstractImgIOComponent.java:57)
+> > at io.scif.img.ImgOpener.<init>(ImgOpener.java:94)
+> > at loci.slim.SLIMProcessor.loadImage(SLIMProcessor.java:1390)
+> > at loci.slim.SLIMProcessor.loadImage(SLIMProcessor.java:1382)
+> > at loci.slim.SLIMProcessor.process(SLIMProcessor.java:277)
+> > at loci.slim.SLIM_PlugIn.run(SLIM_PlugIn.java:45)
+> > at ij.IJ.runUserPlugIn(IJ.java:202)
+> > at ij.IJ.runPlugIn(IJ.java:166)
+> > at ij.Executer.runCommand(Executer.java:131)
+> > at ij.Executer.run(Executer.java:64)
+> > at java.lang.Thread.run(Thread.java:662)
+> > Caused by: java.lang.IllegalArgumentException: Invalid service:
+> net.imagej.legacy.DefaultLegacyService
+> > at
+> org.scijava.service.ServiceHelper.createExactService(ServiceHelper.java:280)
+> > at org.scijava.service.ServiceHelper.loadService(ServiceHelper.java:231)
+> > at
+> org.scijava.service.ServiceHelper.createServiceRecursively(ServiceHelper.java:340)
+> > at
+> org.scijava.service.ServiceHelper.createExactService(ServiceHelper.java:269)
+> > ... 18 more
+> > Caused by: java.lang.UnsupportedOperationException: Cannot instantiate
+> more than one DefaultLegacyService
+> > at
+> net.imagej.legacy.DefaultLegacyService.checkInstance(DefaultLegacyService.java:599)
+> > at
+> net.imagej.legacy.DefaultLegacyService.initialize(DefaultLegacyService.java:404)
+> > at
+> org.scijava.service.ServiceHelper.createServiceRecursively(ServiceHelper.java:353)
+> > at
+> org.scijava.service.ServiceHelper.createExactService(ServiceHelper.java:269)
+> > ... 21 more
+> > Caused by: java.lang.Throwable: Initialized here:
+> > at
+> net.imagej.legacy.DefaultLegacyService.initialize(DefaultLegacyService.java:422)
+> > at
+> org.scijava.service.ServiceHelper.createServiceRecursively(ServiceHelper.java:353)
+> > at
+> org.scijava.service.ServiceHelper.createExactService(ServiceHelper.java:269)
+> > at org.scijava.service.ServiceHelper.loadService(ServiceHelper.java:231)
+> > at
+> org.scijava.service.ServiceHelper.createServiceRecursively(ServiceHelper.java:340)
+> > at
+> org.scijava.service.ServiceHelper.createExactService(ServiceHelper.java:269)
+> > at org.scijava.service.ServiceHelper.loadService(ServiceHelper.java:231)
+> > at org.scijava.service.ServiceHelper.loadService(ServiceHelper.java:194)
+> > at org.scijava.service.ServiceHelper.loadServices(ServiceHelper.java:166)
+> > at org.scijava.Context.<init>(Context.java:244)
+> > at org.scijava.Context.<init>(Context.java:203)
+> > at org.scijava.Context.<init>(Context.java:142)
+> > at org.scijava.Context.<init>(Context.java:98)
+> > at org.scijava.Context.<init>(Context.java:86)
+> > at net.imagej.ImageJ.<init>(ImageJ.java:82)
+> > at net.imagej.Main.launch(Main.java:61)
+> > at net.imagej.Main.main(Main.java:73)
+> > at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+> > at
+> sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+> > at
+> sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+> > at java.lang.reflect.Method.invoke(Method.java:597)
+> > at net.imagej.launcher.ClassLauncher.launch(ClassLauncher.java:258)
+> > at net.imagej.launcher.ClassLauncher.run(ClassLauncher.java:184)
+> > at net.imagej.launcher.ClassLauncher.main(ClassLauncher.java:76)
+> >
+> >
+> >
+> >
+> >
+> >
+> >
+> >
+> >
+> >
+> >
+> > Best regards,
+> > Md Abdul Kader Sagar
+> >
+> > Graduate Student
+> > Department of Electrical and Computer Engineering
+> >
+> >
+> > Research Assistant
+> > Laboratory of Optical and Computational Instrumentation (LOCI)
+> >
+> >
+> > University of Wisconsin-Madison
+> >
+> >
+> > LinkedIn: https://www.linkedin.com/in/aksagar
+> > Cell: +1 608 572 9299
+> > Email:abdul.kader.sagar at gmail.com(javascript:main.compose()
+> > msagar at wisc.edu(javascript:main.compose()
+>
+> --
+> Kevin W. Eliceiri
+> Director, Laboratory for Optical and Computational Instrumentation (LOCI)
+> Departments Cell and Molecular Biology and Biomedical Engineering
+> Affiliate Principal Investigator, Morgridge Institute for Research (MIR)
+> Room 271 Animal Sciences, 1675 Observatory Drive, Madison, WI 53706
+> Phone: 608-263-6288
+>
+> _______________________________________________
+> SLIM-Curve mailing list
+> SLIM-Curve at imagej.net
+> http://loci.wisc.edu/mailman/listinfo/slim-curve
+>
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://loci.wisc.edu/pipermail/slim-curve/attachments/20140814/e049ab57/attachment.html>
+
+From eliceiri at wisc.edu  Thu Aug 14 17:36:03 2014
+From: eliceiri at wisc.edu (Kevin W Eliceiri)
+Date: Thu, 14 Aug 2014 17:36:03 -0500
+Subject: [SLIM-Curve] Slim plugin giving error every time
+In-Reply-To: <CADN69ynJN2iymoOirnRV56D8XeT3hmtaJV28o03-x2s5apFK2A@mail.gmail.com>
+References: <CAG2JH+_tmGNEoNTE2J4bCUokS7wUxdTY1b=yaYCZEZT0i6Q96g@mail.gmail.com>
+	<7700ee1f90f3f.53ec5f25@wiscmail.wisc.edu>
+	<CADN69ynJN2iymoOirnRV56D8XeT3hmtaJV28o03-x2s5apFK2A@mail.gmail.com>
+Message-ID: <74f099fb9cc1f.53ecf383@wiscmail.wisc.edu>
+
+great, let us know how Sagar how it goesbest
+k
+
+On 08/14/14, Curtis Rueden  wrote:
+> Hi all,
+> 
+> > java.lang.IllegalArgumentException: Invalid service:
+> > net.imagej.legacy.LegacyAppEventService
+> 
+> 
+> 
+> Just a quick note that we fixed the problem earlier today:
+> https://github.com/slim-curve/slim-plugin/commit/4c19324650c3e515f1d34f90985c727aa5ae2969
+> 
+> 
+> 
+> Regards,
+> Curtis
+> 
+> 
+> 
+> On Thu, Aug 14, 2014 at 7:03 AM, Kevin W Eliceiri <Email:abdul.kader.sagar at gmail.com <eliceiri at wisc.edu')" target="1">eliceiri at wisc.edu> wrote:
+> 
+> > thanks Sagar, perhaps Curtis can point you in right direction with this at our meeting todaybest
+> > k
+> > 
+> > On 08/14/14, Abdul Kader Sagar wrote:
+> > > Hi all,
+> > >
+> > > I have been trying to load sdt files using the slim plugin. But I am getting error everytime. I tested in 2 windows PC and 1 Mac. They result in the same error.
+> > >
+> > >
+> > >
+> > >
+> > >
+> > >
+> > > java.lang.IllegalArgumentException: Invalid service: net.imagej.legacy.LegacyAppEventService
+> > > at org.scijava.service.ServiceHelper.createExactService(ServiceHelper.java:280)
+> > > at org.scijava.service.ServiceHelper.loadService(ServiceHelper.java:231)
+> > > at org.scijava.service.ServiceHelper.loadService(ServiceHelper.java:194)
+> > > at org.scijava.service.ServiceHelper.loadServices(ServiceHelper.java:166)
+> > > at org.scijava.Context.<init>(Context.java:244)
+> > > at org.scijava.Context.<init>(Context.java:203)
+> > > at org.scijava.Context.<init>(Context.java:142)
+> > > at org.scijava.Context.<init>(Context.java:128)
+> > > at io.scif.img.AbstractImgIOComponent.<init>(AbstractImgIOComponent.java:57)
+> > > at io.scif.img.ImgOpener.<init>(ImgOpener.java:94)
+> > > at loci.slim.SLIMProcessor.loadImage(SLIMProcessor.java:1390)
+> > > at loci.slim.SLIMProcessor.loadImage(SLIMProcessor.java:1382)
+> > > at loci.slim.SLIMProcessor.process(SLIMProcessor.java:277)
+> > > at loci.slim.SLIM_PlugIn.run(SLIM_PlugIn.java:45)
+> > > at ij.IJ.runUserPlugIn(IJ.java:202)
+> > > at ij.IJ.runPlugIn(IJ.java:166)
+> > > at ij.Executer.runCommand(Executer.java:131)
+> > > at ij.Executer.run(Executer.java:64)
+> > > at java.lang.Thread.run(Thread.java:662)
+> > > Caused by: java.lang.IllegalArgumentException: Invalid service: net.imagej.legacy.DefaultLegacyService
+> > > at org.scijava.service.ServiceHelper.createExactService(ServiceHelper.java:280)
+> > > at org.scijava.service.ServiceHelper.loadService(ServiceHelper.java:231)
+> > > at org.scijava.service.ServiceHelper.createServiceRecursively(ServiceHelper.java:340)
+> > > at org.scijava.service.ServiceHelper.createExactService(ServiceHelper.java:269)
+> > > ... 18 more
+> > > Caused by: java.lang.UnsupportedOperationException: Cannot instantiate more than one DefaultLegacyService
+> > > at net.imagej.legacy.DefaultLegacyService.checkInstance(DefaultLegacyService.java:599)
+> > > at net.imagej.legacy.DefaultLegacyService.initialize(DefaultLegacyService.java:404)
+> > > at org.scijava.service.ServiceHelper.createServiceRecursively(ServiceHelper.java:353)
+> > > at org.scijava.service.ServiceHelper.createExactService(ServiceHelper.java:269)
+> > > ... 21 more
+> > > Caused by: java.lang.Throwable: Initialized here:
+> > > at net.imagej.legacy.DefaultLegacyService.initialize(DefaultLegacyService.java:422)
+> > > at org.scijava.service.ServiceHelper.createServiceRecursively(ServiceHelper.java:353)
+> > > at org.scijava.service.ServiceHelper.createExactService(ServiceHelper.java:269)
+> > > at org.scijava.service.ServiceHelper.loadService(ServiceHelper.java:231)
+> > > at org.scijava.service.ServiceHelper.createServiceRecursively(ServiceHelper.java:340)
+> > > at org.scijava.service.ServiceHelper.createExactService(ServiceHelper.java:269)
+> > > at org.scijava.service.ServiceHelper.loadService(ServiceHelper.java:231)
+> > > at org.scijava.service.ServiceHelper.loadService(ServiceHelper.java:194)
+> > > at org.scijava.service.ServiceHelper.loadServices(ServiceHelper.java:166)
+> > > at org.scijava.Context.<init>(Context.java:244)
+> > > at org.scijava.Context.<init>(Context.java:203)
+> > > at org.scijava.Context.<init>(Context.java:142)
+> > > at org.scijava.Context.<init>(Context.java:98)
+> > > at org.scijava.Context.<init>(Context.java:86)
+> > > at net.imagej.ImageJ.<init>(ImageJ.java:82)
+> > > at net.imagej.Main.launch(Main.java:61)
+> > > at net.imagej.Main.main(Main.java:73)
+> > > at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+> > > at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+> > > at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+> > > at java.lang.reflect.Method.invoke(Method.java:597)
+> > > at net.imagej.launcher.ClassLauncher.launch(ClassLauncher.java:258)
+> > > at net.imagej.launcher.ClassLauncher.run(ClassLauncher.java:184)
+> > > at net.imagej.launcher.ClassLauncher.main(ClassLauncher.java:76)
+> > >
+> > >
+> > >
+> > >
+> > >
+> > >
+> > >
+> > >
+> > >
+> > >
+> > >
+> > > Best regards,
+> > > Md Abdul Kader Sagar
+> > >
+> > > Graduate Student
+> > > Department of Electrical and Computer Engineering
+> > >
+> > >
+> > > Research Assistant
+> > > Laboratory of Optical and Computational Instrumentation (LOCI)
+> > >
+> > >
+> > > University of Wisconsin-Madison
+> > >
+> > >
+> > > LinkedIn:?https://www.linkedin.com/in/aksagar
+> > > Cell: +1 608 572 9299(tel:%2B1%20608%20572%209299)
+> > 
+> > 
+> > > 608-263-6288(javascript:main.compose('new', 't=Email:abdul.kader.sagar at gmail.com>(java_script:main.compose()
+> > > msagar at wisc.edu <msagar at wisc.edu>(java_script:main.compose()
+> > 
+> > --
+> > Kevin W. Eliceiri
+> > Director,?Laboratory for Optical and Computational Instrumentation (LOCI)
+> > Departments Cell and Molecular Biology and Biomedical Engineering
+> > Affiliate Principal Investigator, Morgridge Institute for Research (MIR)
+> > Room 271 Animal Sciences,?1675 Observatory Drive,?Madison, WI 53706
+> > Phone: <a href=)
+> > 
+> > _______________________________________________
+> > SLIM-Curve mailing list
+> > SLIM-Curve at imagej.net <SLIM-Curve at imagej.net>
+> > http://loci.wisc.edu/mailman/listinfo/slim-curve
+> > 
+
+--
+Kevin W. Eliceiri
+Director,?Laboratory for Optical and Computational Instrumentation (LOCI)
+Departments Cell and Molecular Biology and Biomedical Engineering
+Affiliate Principal Investigator, Morgridge Institute for Research (MIR)
+Room 271 Animal Sciences,?1675 Observatory Drive,?Madison, WI 53706
+Phone: 608-263-6288
+
+
+From pamela.young at sydney.edu.au  Thu Aug 14 21:28:19 2014
+From: pamela.young at sydney.edu.au (Pamela Young)
+Date: Fri, 15 Aug 2014 02:28:19 +0000
+Subject: [SLIM-Curve] not opening fit window
+Message-ID: <D013AD61.6365%pamela.young@sydney.edu.au>
+
+I was about to post a bug on GitHub but thought I?d ask first because it sounds like you guys are messing with it right now.  Do you already know that when you open an image, it will open the image and the SLIM Plugin window but not the fitting window?  And you can?t move the cursor in the image (as you would to change which pixel it is fitting in the fitting window).  Let me know if you didn?t know this, and I will post on GitHub.
+
+Thanks,
+Pam
+
+Dr Pamela A. Young | Light and Optical Microscopist
+Australian Centre for Microscopy & Microanalysis
+
+THE UNIVERSITY OF SYDNEY
+Rm 116A, Madsen Building F09 | The University of Sydney | NSW | 2006 | Australia
+T +61 2 9351 7527 | F +61 2 9351 7682
+E pamela.young at sydney.edu.au<mailto:pamela.young at sydney.edu.au> | W http://sydney.edu.au/acmm
+
+Incorporating:
+Australian Microscopy & Microanalysis Research Facility (AMMRF) | W http://www.ammrf.org.au<http://www.ammrf.org.au/>
+ARC Centre of Excellence for Design in Light Metals | W http://www.arclightmetals.org.au<http://www.arclightmetals.org.au/>
+
+CRICOS 00026A
+This email plus any attachments to it are confidential. Any unauthorised use is strictly prohibited. If you receive this email in error, please delete it and any attachments.
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://loci.wisc.edu/pipermail/slim-curve/attachments/20140815/b7e51878/attachment-0001.html>
+
+From ctrueden at wisc.edu  Fri Aug 15 15:31:41 2014
+From: ctrueden at wisc.edu (Curtis Rueden)
+Date: Fri, 15 Aug 2014 15:31:41 -0500
+Subject: [SLIM-Curve] not opening fit window
+In-Reply-To: <D013AD61.6365%pamela.young@sydney.edu.au>
+References: <D013AD61.6365%pamela.young@sydney.edu.au>
+Message-ID: <CADN69ymstnaHOUy-kYHS_oJrzyfTon-BTsW5eRfMyLD+ARF6-A@mail.gmail.com>
+
+Hi Pam,
+
+> Do you already know that when you open an image, it will open the
+> image and the SLIM Plugin window but not the fitting window?
+
+I cannot reproduce this problem with the latest version of SLIM Curve. I
+fixed a major problem yesterday -- did you update to that version?
+
+> And you can?t move the cursor in the image (as you would to change
+> which pixel it is fitting in the fitting window).
+
+I have noticed a similar problem on my machine, which I suspect may be
+related to the fact that it has a Retina display. The cursor lines look
+"off" as well, not spanning the full height of the decay curve window. Do
+you notice this behavior too, and/or do you have a Retina display?
+
+Thanks,
+Curtis
+
+
+On Thu, Aug 14, 2014 at 9:28 PM, Pamela Young <pamela.young at sydney.edu.au>
+wrote:
+
+>   I was about to post a bug on GitHub but thought I?d ask first because
+> it sounds like you guys are messing with it right now.  Do you already know
+> that when you open an image, it will open the image and the SLIM Plugin
+> window but not the fitting window?  And you can?t move the cursor in the
+> image (as you would to change which pixel it is fitting in the fitting
+> window).  Let me know if you didn?t know this, and I will post on GitHub.
+>
+>  Thanks,
+> Pam
+>
+>  *Dr Pamela A. Young* | Light and Optical Microscopist
+> Australian Centre for Microscopy & Microanalysis
+>
+>
+> *THE UNIVERSITY OF SYDNEY *Rm 116A, Madsen Building F09 | The University
+> of Sydney | NSW | 2006 | Australia
+> *T* +61 2 9351 7527 | *F* +61 2 9351 7682
+> *E* *pamela.young at sydney.edu.au* <pamela.young at sydney.edu.au> | *W*
+> *http://sydney.edu.au/acmm <http://sydney.edu.au/acmm> *
+> Incorporating:
+> Australian Microscopy & Microanalysis Research Facility (AMMRF) | *W*
+> *http://www.ammrf.org.au <http://www.ammrf.org.au/> *ARC Centre of
+> Excellence for Design in Light Metals | *W*
+> *http://www.arclightmetals.org.au <http://www.arclightmetals.org.au/> *
+> CRICOS 00026A
+> This email plus any attachments to it are confidential. Any unauthorised
+> use is strictly prohibited. If you receive this email in error, please
+> delete it and any attachments.
+>
+> _______________________________________________
+> SLIM-Curve mailing list
+> SLIM-Curve at imagej.net
+> http://loci.wisc.edu/mailman/listinfo/slim-curve
+>
+>
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://loci.wisc.edu/pipermail/slim-curve/attachments/20140815/aae1eea7/attachment.html>
+

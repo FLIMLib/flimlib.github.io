@@ -1,0 +1,208 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [SLIM-Curve] Slim plugin giving error every time
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:slim-curve%40imagej.net?Subject=Re%3A%20%5BSLIM-Curve%5D%20Slim%20plugin%20giving%20error%20every%20time&In-Reply-To=%3C74f099fb9cc1f.53ecf383%40wiscmail.wisc.edu%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000003.html">
+   <LINK REL="Next"  HREF="000005.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[SLIM-Curve] Slim plugin giving error every time</H1>
+    <B>Kevin W Eliceiri</B> 
+    <A HREF="mailto:slim-curve%40imagej.net?Subject=Re%3A%20%5BSLIM-Curve%5D%20Slim%20plugin%20giving%20error%20every%20time&In-Reply-To=%3C74f099fb9cc1f.53ecf383%40wiscmail.wisc.edu%3E"
+       TITLE="[SLIM-Curve] Slim plugin giving error every time">eliceiri at wisc.edu
+       </A><BR>
+    <I>Thu Aug 14 17:36:03 CDT 2014</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000003.html">[SLIM-Curve] Slim plugin giving error every time
+</A></li>
+        <LI>Next message: <A HREF="000005.html">[SLIM-Curve] not opening fit window
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#4">[ date ]</a>
+              <a href="thread.html#4">[ thread ]</a>
+              <a href="subject.html#4">[ subject ]</a>
+              <a href="author.html#4">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>great, let us know how Sagar how it goesbest
+k
+
+On 08/14/14, Curtis Rueden  wrote:
+&gt;<i> Hi all,
+</I>&gt;<i> 
+</I>&gt;<i> &gt; java.lang.IllegalArgumentException: Invalid service:
+</I>&gt;<i> &gt; net.imagej.legacy.LegacyAppEventService
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> Just a quick note that we fixed the problem earlier today:
+</I>&gt;<i> <A HREF="https://github.com/slim-curve/slim-plugin/commit/4c19324650c3e515f1d34f90985c727aa5ae2969">https://github.com/slim-curve/slim-plugin/commit/4c19324650c3e515f1d34f90985c727aa5ae2969</A>
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> Regards,
+</I>&gt;<i> Curtis
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> On Thu, Aug 14, 2014 at 7:03 AM, Kevin W Eliceiri &lt;Email:<A HREF="http://loci.wisc.edu/mailman/listinfo/slim-curve">abdul.kader.sagar at gmail.com</A> &lt;<A HREF="http://loci.wisc.edu/mailman/listinfo/slim-curve">eliceiri at wisc.edu</A>')&quot; target=&quot;1&quot;&gt;<A HREF="http://loci.wisc.edu/mailman/listinfo/slim-curve">eliceiri at wisc.edu</A>&gt; wrote:
+</I>&gt;<i> 
+</I>&gt;<i> &gt; thanks Sagar, perhaps Curtis can point you in right direction with this at our meeting todaybest
+</I>&gt;<i> &gt; k
+</I>&gt;<i> &gt; 
+</I>&gt;<i> &gt; On 08/14/14, Abdul Kader Sagar wrote:
+</I>&gt;<i> &gt; &gt; Hi all,
+</I>&gt;<i> &gt; &gt;
+</I>&gt;<i> &gt; &gt; I have been trying to load sdt files using the slim plugin. But I am getting error everytime. I tested in 2 windows PC and 1 Mac. They result in the same error.
+</I>&gt;<i> &gt; &gt;
+</I>&gt;<i> &gt; &gt;
+</I>&gt;<i> &gt; &gt;
+</I>&gt;<i> &gt; &gt;
+</I>&gt;<i> &gt; &gt;
+</I>&gt;<i> &gt; &gt;
+</I>&gt;<i> &gt; &gt; java.lang.IllegalArgumentException: Invalid service: net.imagej.legacy.LegacyAppEventService
+</I>&gt;<i> &gt; &gt; at org.scijava.service.ServiceHelper.createExactService(ServiceHelper.java:280)
+</I>&gt;<i> &gt; &gt; at org.scijava.service.ServiceHelper.loadService(ServiceHelper.java:231)
+</I>&gt;<i> &gt; &gt; at org.scijava.service.ServiceHelper.loadService(ServiceHelper.java:194)
+</I>&gt;<i> &gt; &gt; at org.scijava.service.ServiceHelper.loadServices(ServiceHelper.java:166)
+</I>&gt;<i> &gt; &gt; at org.scijava.Context.&lt;init&gt;(Context.java:244)
+</I>&gt;<i> &gt; &gt; at org.scijava.Context.&lt;init&gt;(Context.java:203)
+</I>&gt;<i> &gt; &gt; at org.scijava.Context.&lt;init&gt;(Context.java:142)
+</I>&gt;<i> &gt; &gt; at org.scijava.Context.&lt;init&gt;(Context.java:128)
+</I>&gt;<i> &gt; &gt; at io.scif.img.AbstractImgIOComponent.&lt;init&gt;(AbstractImgIOComponent.java:57)
+</I>&gt;<i> &gt; &gt; at io.scif.img.ImgOpener.&lt;init&gt;(ImgOpener.java:94)
+</I>&gt;<i> &gt; &gt; at loci.slim.SLIMProcessor.loadImage(SLIMProcessor.java:1390)
+</I>&gt;<i> &gt; &gt; at loci.slim.SLIMProcessor.loadImage(SLIMProcessor.java:1382)
+</I>&gt;<i> &gt; &gt; at loci.slim.SLIMProcessor.process(SLIMProcessor.java:277)
+</I>&gt;<i> &gt; &gt; at loci.slim.SLIM_PlugIn.run(SLIM_PlugIn.java:45)
+</I>&gt;<i> &gt; &gt; at ij.IJ.runUserPlugIn(IJ.java:202)
+</I>&gt;<i> &gt; &gt; at ij.IJ.runPlugIn(IJ.java:166)
+</I>&gt;<i> &gt; &gt; at ij.Executer.runCommand(Executer.java:131)
+</I>&gt;<i> &gt; &gt; at ij.Executer.run(Executer.java:64)
+</I>&gt;<i> &gt; &gt; at java.lang.Thread.run(Thread.java:662)
+</I>&gt;<i> &gt; &gt; Caused by: java.lang.IllegalArgumentException: Invalid service: net.imagej.legacy.DefaultLegacyService
+</I>&gt;<i> &gt; &gt; at org.scijava.service.ServiceHelper.createExactService(ServiceHelper.java:280)
+</I>&gt;<i> &gt; &gt; at org.scijava.service.ServiceHelper.loadService(ServiceHelper.java:231)
+</I>&gt;<i> &gt; &gt; at org.scijava.service.ServiceHelper.createServiceRecursively(ServiceHelper.java:340)
+</I>&gt;<i> &gt; &gt; at org.scijava.service.ServiceHelper.createExactService(ServiceHelper.java:269)
+</I>&gt;<i> &gt; &gt; ... 18 more
+</I>&gt;<i> &gt; &gt; Caused by: java.lang.UnsupportedOperationException: Cannot instantiate more than one DefaultLegacyService
+</I>&gt;<i> &gt; &gt; at net.imagej.legacy.DefaultLegacyService.checkInstance(DefaultLegacyService.java:599)
+</I>&gt;<i> &gt; &gt; at net.imagej.legacy.DefaultLegacyService.initialize(DefaultLegacyService.java:404)
+</I>&gt;<i> &gt; &gt; at org.scijava.service.ServiceHelper.createServiceRecursively(ServiceHelper.java:353)
+</I>&gt;<i> &gt; &gt; at org.scijava.service.ServiceHelper.createExactService(ServiceHelper.java:269)
+</I>&gt;<i> &gt; &gt; ... 21 more
+</I>&gt;<i> &gt; &gt; Caused by: java.lang.Throwable: Initialized here:
+</I>&gt;<i> &gt; &gt; at net.imagej.legacy.DefaultLegacyService.initialize(DefaultLegacyService.java:422)
+</I>&gt;<i> &gt; &gt; at org.scijava.service.ServiceHelper.createServiceRecursively(ServiceHelper.java:353)
+</I>&gt;<i> &gt; &gt; at org.scijava.service.ServiceHelper.createExactService(ServiceHelper.java:269)
+</I>&gt;<i> &gt; &gt; at org.scijava.service.ServiceHelper.loadService(ServiceHelper.java:231)
+</I>&gt;<i> &gt; &gt; at org.scijava.service.ServiceHelper.createServiceRecursively(ServiceHelper.java:340)
+</I>&gt;<i> &gt; &gt; at org.scijava.service.ServiceHelper.createExactService(ServiceHelper.java:269)
+</I>&gt;<i> &gt; &gt; at org.scijava.service.ServiceHelper.loadService(ServiceHelper.java:231)
+</I>&gt;<i> &gt; &gt; at org.scijava.service.ServiceHelper.loadService(ServiceHelper.java:194)
+</I>&gt;<i> &gt; &gt; at org.scijava.service.ServiceHelper.loadServices(ServiceHelper.java:166)
+</I>&gt;<i> &gt; &gt; at org.scijava.Context.&lt;init&gt;(Context.java:244)
+</I>&gt;<i> &gt; &gt; at org.scijava.Context.&lt;init&gt;(Context.java:203)
+</I>&gt;<i> &gt; &gt; at org.scijava.Context.&lt;init&gt;(Context.java:142)
+</I>&gt;<i> &gt; &gt; at org.scijava.Context.&lt;init&gt;(Context.java:98)
+</I>&gt;<i> &gt; &gt; at org.scijava.Context.&lt;init&gt;(Context.java:86)
+</I>&gt;<i> &gt; &gt; at net.imagej.ImageJ.&lt;init&gt;(ImageJ.java:82)
+</I>&gt;<i> &gt; &gt; at net.imagej.Main.launch(Main.java:61)
+</I>&gt;<i> &gt; &gt; at net.imagej.Main.main(Main.java:73)
+</I>&gt;<i> &gt; &gt; at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+</I>&gt;<i> &gt; &gt; at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+</I>&gt;<i> &gt; &gt; at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+</I>&gt;<i> &gt; &gt; at java.lang.reflect.Method.invoke(Method.java:597)
+</I>&gt;<i> &gt; &gt; at net.imagej.launcher.ClassLauncher.launch(ClassLauncher.java:258)
+</I>&gt;<i> &gt; &gt; at net.imagej.launcher.ClassLauncher.run(ClassLauncher.java:184)
+</I>&gt;<i> &gt; &gt; at net.imagej.launcher.ClassLauncher.main(ClassLauncher.java:76)
+</I>&gt;<i> &gt; &gt;
+</I>&gt;<i> &gt; &gt;
+</I>&gt;<i> &gt; &gt;
+</I>&gt;<i> &gt; &gt;
+</I>&gt;<i> &gt; &gt;
+</I>&gt;<i> &gt; &gt;
+</I>&gt;<i> &gt; &gt;
+</I>&gt;<i> &gt; &gt;
+</I>&gt;<i> &gt; &gt;
+</I>&gt;<i> &gt; &gt;
+</I>&gt;<i> &gt; &gt;
+</I>&gt;<i> &gt; &gt; Best regards,
+</I>&gt;<i> &gt; &gt; Md Abdul Kader Sagar
+</I>&gt;<i> &gt; &gt;
+</I>&gt;<i> &gt; &gt; Graduate Student
+</I>&gt;<i> &gt; &gt; Department of Electrical and Computer Engineering
+</I>&gt;<i> &gt; &gt;
+</I>&gt;<i> &gt; &gt;
+</I>&gt;<i> &gt; &gt; Research Assistant
+</I>&gt;<i> &gt; &gt; Laboratory of Optical and Computational Instrumentation (LOCI)
+</I>&gt;<i> &gt; &gt;
+</I>&gt;<i> &gt; &gt;
+</I>&gt;<i> &gt; &gt; University of Wisconsin-Madison
+</I>&gt;<i> &gt; &gt;
+</I>&gt;<i> &gt; &gt;
+</I>&gt;<i> &gt; &gt; LinkedIn:&#160;<A HREF="https://www.linkedin.com/in/aksagar">https://www.linkedin.com/in/aksagar</A>
+</I>&gt;<i> &gt; &gt; Cell: +1 608 572 9299(tel:%2B1%20608%20572%209299)
+</I>&gt;<i> &gt; 
+</I>&gt;<i> &gt; 
+</I>&gt;<i> &gt; &gt; 608-263-6288(javascript:main.compose('new', 't=Email:<A HREF="http://loci.wisc.edu/mailman/listinfo/slim-curve">abdul.kader.sagar at gmail.com</A>&gt;(java_script:main.compose()
+</I>&gt;<i> &gt; &gt; <A HREF="http://loci.wisc.edu/mailman/listinfo/slim-curve">msagar at wisc.edu</A> &lt;<A HREF="http://loci.wisc.edu/mailman/listinfo/slim-curve">msagar at wisc.edu</A>&gt;(java_script:main.compose()
+</I>&gt;<i> &gt; 
+</I>&gt;<i> &gt; --
+</I>&gt;<i> &gt; Kevin W. Eliceiri
+</I>&gt;<i> &gt; Director,&#160;Laboratory for Optical and Computational Instrumentation (LOCI)
+</I>&gt;<i> &gt; Departments Cell and Molecular Biology and Biomedical Engineering
+</I>&gt;<i> &gt; Affiliate Principal Investigator, Morgridge Institute for Research (MIR)
+</I>&gt;<i> &gt; Room 271 Animal Sciences,&#160;1675 Observatory Drive,&#160;Madison, WI 53706
+</I>&gt;<i> &gt; Phone: &lt;a href=)
+</I>&gt;<i> &gt; 
+</I>&gt;<i> &gt; _______________________________________________
+</I>&gt;<i> &gt; SLIM-Curve mailing list
+</I>&gt;<i> &gt; <A HREF="http://loci.wisc.edu/mailman/listinfo/slim-curve">SLIM-Curve at imagej.net</A> &lt;<A HREF="http://loci.wisc.edu/mailman/listinfo/slim-curve">SLIM-Curve at imagej.net</A>&gt;
+</I>&gt;<i> &gt; <A HREF="http://loci.wisc.edu/mailman/listinfo/slim-curve">http://loci.wisc.edu/mailman/listinfo/slim-curve</A>
+</I>&gt;<i> &gt; 
+</I>
+--
+Kevin W. Eliceiri
+Director,&#160;Laboratory for Optical and Computational Instrumentation (LOCI)
+Departments Cell and Molecular Biology and Biomedical Engineering
+Affiliate Principal Investigator, Morgridge Institute for Research (MIR)
+Room 271 Animal Sciences,&#160;1675 Observatory Drive,&#160;Madison, WI 53706
+Phone: 608-263-6288
+
+</PRE>
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000003.html">[SLIM-Curve] Slim plugin giving error every time
+</A></li>
+	<LI>Next message: <A HREF="000005.html">[SLIM-Curve] not opening fit window
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#4">[ date ]</a>
+              <a href="thread.html#4">[ thread ]</a>
+              <a href="subject.html#4">[ subject ]</a>
+              <a href="author.html#4">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://loci.wisc.edu/mailman/listinfo/slim-curve">More information about the SLIM-Curve
+mailing list</a><br>
+</body></html>

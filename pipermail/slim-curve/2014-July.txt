@@ -1,0 +1,45 @@
+From ctrueden at wisc.edu  Tue Jul 15 14:59:37 2014
+From: ctrueden at wisc.edu (Curtis Rueden)
+Date: Tue, 15 Jul 2014 14:59:37 -0500
+Subject: [SLIM-Curve] SLIM Curve project next steps
+Message-ID: <CADN69y=dhaiLF5MfPL8h1VtFAgWLisP-2wOh_mG6-cJa=KspYg@mail.gmail.com>
+
+Hi everyone,
+
+Starting today, one of our developers here at LOCI, Md Abdul Kader Sagar,
+will be working on improving the SLIM Curve codebase, including both the C
+library as needed, as well as the ImageJ plugin.
+
+Today we discussed initial steps for getting acquainted with SLIM Curve.
+They are:
+
+Read the SLIM Curve website (http://slim-curve.github.io/) to get familiar
+with SLIM Curve, and the various ways of using it.
+
+Read the SLIM Curve plugin wiki page (http://fiji.sc/SLIM_Curve) to learn
+about the functionality of the SLIM Curve plugin for ImageJ.
+
+To see the plan for the various SLIM Curve repositories, see the SLIM Curve
+wiki, as well as open issues for the C library and Java plugin code:
+* https://github.com/slim-curve/slim-curve/wiki
+* https://github.com/slim-curve/slim-curve/issues
+* https://github.com/slim-curve/slim-plugin/issues
+
+Sagar will try using SLIM Curve in its various incarnations, as follows:
+
+1) Read the SLIM Curve paper draft.
+2) Install Fiji, enable SLIM Curve update site; try to use the SLIM Curve
+plugin to analyze some SDT lifetime data.
+3) Try using SLIM Curve from the command line, as well as MATLAB.
+4) Download TRI2, try using that to analyze the same data.
+
+Sagar and I will meet again next week to discuss issues that have arisen
+from this exploration. And we'll follow up on this mailing list with
+prioritization of next steps afterward.
+
+Regards,
+Curtis
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://loci.wisc.edu/pipermail/slim-curve/attachments/20140715/816c622e/attachment.html>
+

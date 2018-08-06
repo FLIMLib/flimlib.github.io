@@ -1,0 +1,211 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [SLIM-Curve] sdt file reading error in SLIM curve
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:slim-curve%40imagej.net?Subject=Re%3A%20%5BSLIM-Curve%5D%20sdt%20file%20reading%20error%20in%20SLIM%20curve&In-Reply-To=%3CCAG2JH%2B_-DrFxYQpJkYZoLKz8OjwWeZLjJSapWQ%3DYn%3DnjHDmosg%40mail.gmail.com%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000009.html">
+   <LINK REL="Next"  HREF="000011.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[SLIM-Curve] sdt file reading error in SLIM curve</H1>
+    <B>Abdul Kader Sagar</B> 
+    <A HREF="mailto:slim-curve%40imagej.net?Subject=Re%3A%20%5BSLIM-Curve%5D%20sdt%20file%20reading%20error%20in%20SLIM%20curve&In-Reply-To=%3CCAG2JH%2B_-DrFxYQpJkYZoLKz8OjwWeZLjJSapWQ%3DYn%3DnjHDmosg%40mail.gmail.com%3E"
+       TITLE="[SLIM-Curve] sdt file reading error in SLIM curve">abdul.kader.sagar at gmail.com
+       </A><BR>
+    <I>Mon Jun 29 14:14:45 CDT 2015</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000009.html">[SLIM-Curve] sdt file reading error in SLIM curve
+</A></li>
+        <LI>Next message: <A HREF="000011.html">[SLIM-Curve] sdt file reading error in SLIM curve
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#10">[ date ]</a>
+              <a href="thread.html#10">[ thread ]</a>
+              <a href="subject.html#10">[ subject ]</a>
+              <a href="author.html#10">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hi Curtis,
+
+For now the best workaround would be using SPCM to decompress the image. In
+FIFO mode, the images are compressed to save space, even though they are
+both *.SDT format.
+
+For converting(using SPCM), go to File-&gt; Convert-&gt; SDT Files
+
+In destination file format, select SDT unzipped(I have attached a
+screenshot for clarification). Let me know if this was helpful.
+
+Thanks
+
+Best regards,
+Md Abdul Kader Sagar
+
+Graduate Student
+*Department of Electrical and Computer Engineering*
+
+Research Assistant
+*Laboratory of Optical and Computational Instrumentation (LOCI)*
+
+*University of Wisconsin-Madison*
+
+LinkedIn: <A HREF="https://www.linkedin.com/in/aksagar">https://www.linkedin.com/in/aksagar</A>
+Web: <A HREF="http://loci.wisc.edu/people/md-abdul-kader-sagar">http://loci.wisc.edu/people/md-abdul-kader-sagar</A>
+Cell: +1 608 572 9299
+*Email*: <A HREF="http://loci.wisc.edu/mailman/listinfo/slim-curve">abdul.kader.sagar at gmail.com</A>
+ <A HREF="http://loci.wisc.edu/mailman/listinfo/slim-curve">msagar at wisc.edu</A>
+
+On Mon, Jun 29, 2015 at 1:57 PM, Curtis Rueden &lt; <A HREF="http://loci.wisc.edu/mailman/listinfo/slim-curve">ctrueden at wisc.edu</A>&gt; wrote:
+
+&gt;<i> Hi Doogie,
+</I>&gt;<i>
+</I>&gt;<i> &gt; I am wondering whether you are working on it. Or you got in troubles.
+</I>&gt;<i> &gt; If you have any suggestions such as converting sdt file into other
+</I>&gt;<i> &gt; format, please let me know.
+</I>&gt;<i>
+</I>&gt;<i> I'm CCing the slim-curve mailing list, which is the best place to discuss
+</I>&gt;<i> these issues.
+</I>&gt;<i>
+</I>&gt;<i> Unfortunately, I have not had any significant time to work on the SDT
+</I>&gt;<i> issues. However, I did pass along your issue to Sagar (CCed), the current
+</I>&gt;<i> maintainer of the SLIM Curve plugin for ImageJ.
+</I>&gt;<i>
+</I>&gt;<i> Your image appears to be a FIFO image, which is currently not supported in
+</I>&gt;<i> ImageJ or SCIFIO. But Sagar is actively working on adding support for FIFO
+</I>&gt;<i> images to our software, since we have some of those here in our lab as well.
+</I>&gt;<i>
+</I>&gt;<i> Sagar, please let me know if you need any guidance or support on this
+</I>&gt;<i> project. Or if you have any workarounds that Doogie can use in the meantime.
+</I>&gt;<i>
+</I>&gt;<i> Regards,
+</I>&gt;<i> Curtis
+</I>&gt;<i>
+</I>&gt;<i> On Sat, Jun 27, 2015 at 11:00 PM, Oh, Doogie &lt; <A HREF="http://loci.wisc.edu/mailman/listinfo/slim-curve">doh at cgr.harvard.edu</A>&gt; wrote:
+</I>&gt;<i>
+</I>&gt;&gt;<i>  Hi Curtis,
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> I am wondering whether you are working on it. Or you got in troubles. If
+</I>&gt;&gt;<i> you have any suggestions such as converting sdt file into other format,
+</I>&gt;&gt;<i> please let me know.
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> Regards,
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> Doogie
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> *From:*  <A HREF="http://loci.wisc.edu/mailman/listinfo/slim-curve">ctrueden.wisc at gmail.com</A> [mailto: <A HREF="http://loci.wisc.edu/mailman/listinfo/slim-curve">ctrueden.wisc at gmail.com</A>] *On
+</I>&gt;&gt;<i> Behalf Of *Curtis Rueden
+</I>&gt;&gt;<i> *Sent:* Wednesday, April 22, 2015 2:03 PM
+</I>&gt;&gt;<i> *To:* Oh, Doogie
+</I>&gt;&gt;<i> *Cc:*  <A HREF="http://loci.wisc.edu/mailman/listinfo/slim-curve">slim-curve at imagej.net</A>
+</I>&gt;&gt;<i> *Subject:* Re: sdt file reading error in SLIM curve
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> Hi Doogie,
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> &gt; Library not on path Unable to load library 'slim-curve-1.0-SNAPSHOT'
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> Thanks for the bug report. I am able to reproduce this issue on my OS X
+</I>&gt;&gt;<i> system.
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> I will investigate further and reply back when there is a fix.
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> Regards,
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> Curtis
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> On Fri, Apr 17, 2015 at 1:25 PM, Oh, Doogie &lt; <A HREF="http://loci.wisc.edu/mailman/listinfo/slim-curve">doh at cgr.harvard.edu</A>&gt; wrote:
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>  Dear Curtis,
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> I am trying to load sdt file, but couldn&#8217;t get the correct image. Could
+</I>&gt;&gt;<i> you diagnose the problems? I attach the sdt file and the loading results.
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> Best regards,
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> Doogie Oh, Ph. D
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> Department of Molecular and Cellular Biology
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> Applied Physics
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> Harvard University
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> 52 Oxford st,
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> Northwest lab building, Room 358
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> Cambridge, MA
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> 02138
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: &lt;<A HREF="http://loci.wisc.edu/pipermail/slim-curve/attachments/20150629/8fa76ea0/attachment-0001.html">http://loci.wisc.edu/pipermail/slim-curve/attachments/20150629/8fa76ea0/attachment-0001.html</A>&gt;
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: Capture.JPG
+Type: image/jpeg
+Size: 71709 bytes
+Desc: not available
+URL: &lt;<A HREF="http://loci.wisc.edu/pipermail/slim-curve/attachments/20150629/8fa76ea0/attachment-0001.jpe">http://loci.wisc.edu/pipermail/slim-curve/attachments/20150629/8fa76ea0/attachment-0001.jpe</A>&gt;
+</PRE>
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000009.html">[SLIM-Curve] sdt file reading error in SLIM curve
+</A></li>
+	<LI>Next message: <A HREF="000011.html">[SLIM-Curve] sdt file reading error in SLIM curve
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#10">[ date ]</a>
+              <a href="thread.html#10">[ thread ]</a>
+              <a href="subject.html#10">[ subject ]</a>
+              <a href="author.html#10">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://loci.wisc.edu/mailman/listinfo/slim-curve">More information about the SLIM-Curve
+mailing list</a><br>
+</body></html>

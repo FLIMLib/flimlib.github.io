@@ -1,0 +1,55 @@
+From ctrueden at wisc.edu  Wed Apr 22 13:03:29 2015
+From: ctrueden at wisc.edu (Curtis Rueden)
+Date: Wed, 22 Apr 2015 13:03:29 -0500
+Subject: [SLIM-Curve] sdt file reading error in SLIM curve
+In-Reply-To: <9D94EDC6E92A5C4D9493BBC3838134551C89AAD1@HARVANDMBX03.fasmail.priv>
+References: <9D94EDC6E92A5C4D9493BBC3838134551C89AAD1@HARVANDMBX03.fasmail.priv>
+Message-ID: <CADN69ymXiJOb+B8coLRK5umCDrx0Yjw9Z+SqUEXhD4MTjjxWAg@mail.gmail.com>
+
+Hi Doogie,
+
+> Library not on path Unable to load library 'slim-curve-1.0-SNAPSHOT'
+
+Thanks for the bug report. I am able to reproduce this issue on my OS X
+system.
+
+I will investigate further and reply back when there is a fix.
+
+Regards,
+Curtis
+
+On Fri, Apr 17, 2015 at 1:25 PM, Oh, Doogie <doh at cgr.harvard.edu> wrote:
+
+>  Dear Curtis,
+>
+>
+>
+> I am trying to load sdt file, but couldn?t get the correct image. Could
+> you diagnose the problems? I attach the sdt file and the loading results.
+>
+>
+>
+> Best regards,
+>
+> Doogie Oh, Ph. D
+>
+> Department of Molecular and Cellular Biology
+>
+> Applied Physics
+>
+> Harvard University
+>
+> 52 Oxford st,
+>
+> Northwest lab building, Room 358
+>
+> Cambridge, MA
+>
+> 02138
+>
+>
+>
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://loci.wisc.edu/pipermail/slim-curve/attachments/20150422/fc7e8885/attachment.html>
+

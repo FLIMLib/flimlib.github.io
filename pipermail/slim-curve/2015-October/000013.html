@@ -1,0 +1,158 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [SLIM-Curve] SLIM Curve plugin - version on update site broken, on github it's fine
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:slim-curve%40imagej.net?Subject=Re%3A%20%5BSLIM-Curve%5D%20SLIM%20Curve%20plugin%20-%20version%20on%20update%20site%20broken%2C%0A%20on%20github%20it%27s%20fine&In-Reply-To=%3C560E7AE3.4030308%40mpi-cbg.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   
+   <LINK REL="Next"  HREF="000014.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[SLIM-Curve] SLIM Curve plugin - version on update site broken, on github it's fine</H1>
+    <B>Robert Haase</B> 
+    <A HREF="mailto:slim-curve%40imagej.net?Subject=Re%3A%20%5BSLIM-Curve%5D%20SLIM%20Curve%20plugin%20-%20version%20on%20update%20site%20broken%2C%0A%20on%20github%20it%27s%20fine&In-Reply-To=%3C560E7AE3.4030308%40mpi-cbg.de%3E"
+       TITLE="[SLIM-Curve] SLIM Curve plugin - version on update site broken, on github it's fine">rhaase at mpi-cbg.de
+       </A><BR>
+    <I>Fri Oct  2 07:38:59 CDT 2015</I>
+    <P><UL>
+        
+        <LI>Next message: <A HREF="000014.html">[SLIM-Curve] parameter differences between FIJI an SPCImage5
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#13">[ date ]</a>
+              <a href="thread.html#13">[ thread ]</a>
+              <a href="subject.html#13">[ subject ]</a>
+              <a href="author.html#13">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hi Curtis,
+
+it appears working here as well. So thanks for the fix. Regarding the 
+Github issue: I guess potential deadlocks appear sometimes and sometimes 
+not. So, I thought it has something to do with a difference between 
+update site and github, but obviously it has not.
+
+So fine, fixed. :)
+
+Have a nice weekend!
+
+Best,
+Robert
+
+
+Am 9/24/15 um 6:38 PM schrieb Curtis Rueden:
+&gt;<i> Hi Robert,
+</I>&gt;<i>
+</I>&gt;<i> [CCing slim-curve mailing list, because public discussion is better.]
+</I>&gt;<i>
+</I>&gt;<i> &gt; FIJI freezes, when running the plugin as mentioned on its wiki page
+</I>&gt;<i> &gt; (Click menu Analyse &gt; Lifetime &gt; SLIM Curve). So, the plugin is
+</I>&gt;<i> &gt; unusable :(
+</I>&gt;<i>
+</I>&gt;<i> Thanks for the report. I was able to reproduce with a fully updated 
+</I>&gt;<i> Fiji + SLIM-Curve update site.
+</I>&gt;<i>
+</I>&gt;<i> I fixed the problem [1], and uploaded the new version to the update site.
+</I>&gt;<i>
+</I>&gt;<i> &gt; when I download the source from Github and compile it using Eclipse,
+</I>&gt;<i> &gt; the plugin runs fine.
+</I>&gt;<i>
+</I>&gt;<i> Not sure what you mean by that, but I'm surprised that would make a 
+</I>&gt;<i> difference. There was a legitimate deadlock issue in the code. The 
+</I>&gt;<i> main mystery is why it ever worked at all prior to the latest version 
+</I>&gt;<i> of ImageJ.
+</I>&gt;<i>
+</I>&gt;<i> Anyway, give it a try and let us know if this fix resolves the problem 
+</I>&gt;<i> for you!
+</I>&gt;<i>
+</I>&gt;<i> Regards,
+</I>&gt;<i> Curtis
+</I>&gt;<i>
+</I>&gt;<i> [1] 
+</I>&gt;<i> <A HREF="https://github.com/slim-curve/slim-plugin/commit/f452ad4b8411933450c8bd17d00eb84ac23de7e4">https://github.com/slim-curve/slim-plugin/commit/f452ad4b8411933450c8bd17d00eb84ac23de7e4</A>
+</I>&gt;<i>
+</I>&gt;<i> On Thu, Sep 24, 2015 at 2:45 AM, Robert Haase &lt;<A HREF="http://loci.wisc.edu/mailman/listinfo/slim-curve">rhaase at mpi-cbg.de</A> 
+</I>&gt;<i> &lt;mailto:<A HREF="http://loci.wisc.edu/mailman/listinfo/slim-curve">rhaase at mpi-cbg.de</A>&gt;&gt; wrote:
+</I>&gt;<i>
+</I>&gt;<i>     Hi SLIM Curve plugin maintainers,
+</I>&gt;<i>
+</I>&gt;<i>     I've got a very simple issue with the SLIM curve plugin
+</I>&gt;<i>     (<A HREF="http://fiji.sc/SLIM_Curve">http://fiji.sc/SLIM_Curve</A>):
+</I>&gt;<i>
+</I>&gt;<i>     * I just downloaded it using the update site
+</I>&gt;<i>     (<A HREF="http://sites.imagej.net/SLIM-Curve/">http://sites.imagej.net/SLIM-Curve/</A>) in  a current version of
+</I>&gt;<i>     FIJI (ImageJ 2.0.0-rc-39/1.50b; Java 1.8.0_51) on MacOS 10.10.3
+</I>&gt;<i>
+</I>&gt;<i>     * FIJI freezes, when running the plugin as mentioned on its wiki
+</I>&gt;<i>     page (Click menu Analyse &gt; Lifetime &gt; SLIM Curve). So, the plugin
+</I>&gt;<i>     is unusable :(
+</I>&gt;<i>
+</I>&gt;<i>     * However, when I download the source from Github and compile it
+</I>&gt;<i>     using Eclipse, the plugin runs fine.
+</I>&gt;<i>
+</I>&gt;<i>     Could anybody of you please update the update site, so that the
+</I>&gt;<i>     plugin works again? It would be a pitty, if the plugin is lost
+</I>&gt;<i>     because of nothing.
+</I>&gt;<i>
+</I>&gt;<i>     If I can assist somehow, just let me know.
+</I>&gt;<i>
+</I>&gt;<i>     Best,
+</I>&gt;<i>     Robert
+</I>&gt;<i>
+</I>&gt;<i>     -- 
+</I>&gt;<i>     Robert Haase
+</I>&gt;<i>     Bio-Image informatics, Scientific Computing Facility
+</I>&gt;<i>
+</I>&gt;<i>     Max Planck Institute CBG
+</I>&gt;<i>     Pfotenhauer Str. 108, 01307 Dresden
+</I>&gt;<i>     room: 106 (s)
+</I>&gt;<i>     phone:+49 351 210 2972 &lt;tel:%2B49%20351%20210%202972&gt;
+</I>&gt;<i>     fax:+49 351 210 1689 &lt;tel:%2B49%20351%20210%201689&gt;
+</I>&gt;<i>
+</I>&gt;<i>
+</I>
+-- 
+Robert Haase
+Bio-Image informatics, Scientific Computing Facility
+
+Max Planck Institute CBG
+Pfotenhauer Str. 108, 01307 Dresden
+room: 106 (s)
+phone: +49 351 210 2972
+fax:   +49 351 210 1689
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: &lt;<A HREF="http://loci.wisc.edu/pipermail/slim-curve/attachments/20151002/67b43b44/attachment.html">http://loci.wisc.edu/pipermail/slim-curve/attachments/20151002/67b43b44/attachment.html</A>&gt;
+</PRE>
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	
+	<LI>Next message: <A HREF="000014.html">[SLIM-Curve] parameter differences between FIJI an SPCImage5
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#13">[ date ]</a>
+              <a href="thread.html#13">[ thread ]</a>
+              <a href="subject.html#13">[ subject ]</a>
+              <a href="author.html#13">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://loci.wisc.edu/mailman/listinfo/slim-curve">More information about the SLIM-Curve
+mailing list</a><br>
+</body></html>

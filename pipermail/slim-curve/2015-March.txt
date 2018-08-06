@@ -1,0 +1,70 @@
+From ctrueden at wisc.edu  Wed Mar 18 11:31:41 2015
+From: ctrueden at wisc.edu (Curtis Rueden)
+Date: Wed, 18 Mar 2015 11:31:41 -0500
+Subject: [SLIM-Curve] SLIM Curve question
+In-Reply-To: <CAPt1QtZ_xKQRfgO37CB6H+qzv8CM54dnaDR_W1P4Ep4nm5c+Fw@mail.gmail.com>
+References: <CAPt1QtZ_xKQRfgO37CB6H+qzv8CM54dnaDR_W1P4Ep4nm5c+Fw@mail.gmail.com>
+Message-ID: <CADN69ykppdv95KbCPxy57GBtQTRgYhSBw6ig8NDhW60uf3ne9g@mail.gmail.com>
+
+Hi Steve,
+
+I am CCing the slim-curve mailing list, which is the best place to ask
+questions about SLIM Curve.
+
+> While using the Fit Images function, histograms are generated for each
+> parameter (A, x2, T, Z). The histograms are divided by quartiles which
+> are indicated with dashed lines.
+>
+> My question is, is there a way to find or generate the values of where
+> the quartiles are made in the histogram with SLIM Curve?
+
+This quartiles are computed from the histogram like so:
+
+https://github.com/slim-curve/slim-plugin/blob/master/src/main/java/loci/slim/histogram/HistogramDataNode.java#L165-L254
+
+And then applied to a HistogramStatistics object:
+
+https://github.com/slim-curve/slim-plugin/blob/5b12b4f64bd07318a47615b96215892336d706eb/src/main/java/loci/slim/histogram/HistogramDataGroup.java#L451-L460
+
+You could override the quartile values using Java code, but then they
+wouldn't really be "quartile" values anymore from a mathematical
+perspective, since the actual distribution would not match what you define
+as quartile boundaries.
+
+Can you be more specific about what you are trying to achieve?
+
+Regards,
+Curtis
+
+On Tue, Mar 17, 2015 at 8:27 PM, Steven Wu <scwu at umn.edu> wrote:
+
+> Hello,
+>
+> I am using the SLIM Curve plugin in FIJI to process FLIM data files that
+> were generated with SPCImage.
+>
+> While using the Fit Images function, histograms are generated for each
+> parameter (A, x2, T, Z). The histograms are divided by quartiles which are
+> indicated with dashed lines.
+>
+> My question is, is there a way to find or generate the values of where the
+> quartiles are made in the histogram with SLIM Curve?
+>
+> Thanks for your help.
+>
+> Steve
+>
+> --
+> Steven Wu, PhD
+> University of Minnesota
+> Department of Integrative Biology and Physiology
+> Cancer and Cardiovascular Research Center
+> 3-220 #27
+> 2231 6th ST SE
+> Minneapolis, MN 55455
+> (612) 626-5585
+>
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <http://loci.wisc.edu/pipermail/slim-curve/attachments/20150318/d99e43af/attachment.html>
+

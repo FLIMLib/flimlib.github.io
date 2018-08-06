@@ -1,0 +1,166 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [SLIM-Curve] Slim plugin giving error every time
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:slim-curve%40imagej.net?Subject=Re%3A%20%5BSLIM-Curve%5D%20Slim%20plugin%20giving%20error%20every%20time&In-Reply-To=%3CCAG2JH%2B_tmGNEoNTE2J4bCUokS7wUxdTY1b%3DyaYCZEZT0i6Q96g%40mail.gmail.com%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   
+   <LINK REL="Next"  HREF="000002.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[SLIM-Curve] Slim plugin giving error every time</H1>
+    <B>Abdul Kader Sagar</B> 
+    <A HREF="mailto:slim-curve%40imagej.net?Subject=Re%3A%20%5BSLIM-Curve%5D%20Slim%20plugin%20giving%20error%20every%20time&In-Reply-To=%3CCAG2JH%2B_tmGNEoNTE2J4bCUokS7wUxdTY1b%3DyaYCZEZT0i6Q96g%40mail.gmail.com%3E"
+       TITLE="[SLIM-Curve] Slim plugin giving error every time">abdul.kader.sagar at gmail.com
+       </A><BR>
+    <I>Thu Aug 14 00:06:26 CDT 2014</I>
+    <P><UL>
+        
+        <LI>Next message: <A HREF="000002.html">[SLIM-Curve] Slim plugin giving error every time
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#1">[ date ]</a>
+              <a href="thread.html#1">[ thread ]</a>
+              <a href="subject.html#1">[ subject ]</a>
+              <a href="author.html#1">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hi all,
+
+I have been trying to load sdt files using the slim plugin. But I am
+getting error everytime. I tested in 2 windows PC and 1 Mac. They result in
+the same error.
+
+
+
+java.lang.IllegalArgumentException: Invalid service:
+net.imagej.legacy.LegacyAppEventService
+at
+org.scijava.service.ServiceHelper.createExactService(ServiceHelper.java:280)
+ at org.scijava.service.ServiceHelper.loadService(ServiceHelper.java:231)
+at org.scijava.service.ServiceHelper.loadService(ServiceHelper.java:194)
+ at org.scijava.service.ServiceHelper.loadServices(ServiceHelper.java:166)
+at org.scijava.Context.&lt;init&gt;(Context.java:244)
+ at org.scijava.Context.&lt;init&gt;(Context.java:203)
+at org.scijava.Context.&lt;init&gt;(Context.java:142)
+ at org.scijava.Context.&lt;init&gt;(Context.java:128)
+at io.scif.img.AbstractImgIOComponent.&lt;init&gt;(AbstractImgIOComponent.java:57)
+ at io.scif.img.ImgOpener.&lt;init&gt;(ImgOpener.java:94)
+at loci.slim.SLIMProcessor.loadImage(SLIMProcessor.java:1390)
+ at loci.slim.SLIMProcessor.loadImage(SLIMProcessor.java:1382)
+at loci.slim.SLIMProcessor.process(SLIMProcessor.java:277)
+ at loci.slim.SLIM_PlugIn.run(SLIM_PlugIn.java:45)
+at ij.IJ.runUserPlugIn(IJ.java:202)
+at ij.IJ.runPlugIn(IJ.java:166)
+ at ij.Executer.runCommand(Executer.java:131)
+at ij.Executer.run(Executer.java:64)
+at java.lang.Thread.run(Thread.java:662)
+Caused by: java.lang.IllegalArgumentException: Invalid service:
+net.imagej.legacy.DefaultLegacyService
+at
+org.scijava.service.ServiceHelper.createExactService(ServiceHelper.java:280)
+ at org.scijava.service.ServiceHelper.loadService(ServiceHelper.java:231)
+at
+org.scijava.service.ServiceHelper.createServiceRecursively(ServiceHelper.java:340)
+ at
+org.scijava.service.ServiceHelper.createExactService(ServiceHelper.java:269)
+... 18 more
+Caused by: java.lang.UnsupportedOperationException: Cannot instantiate more
+than one DefaultLegacyService
+ at
+net.imagej.legacy.DefaultLegacyService.checkInstance(DefaultLegacyService.java:599)
+at
+net.imagej.legacy.DefaultLegacyService.initialize(DefaultLegacyService.java:404)
+ at
+org.scijava.service.ServiceHelper.createServiceRecursively(ServiceHelper.java:353)
+at
+org.scijava.service.ServiceHelper.createExactService(ServiceHelper.java:269)
+ ... 21 more
+Caused by: java.lang.Throwable: Initialized here:
+at
+net.imagej.legacy.DefaultLegacyService.initialize(DefaultLegacyService.java:422)
+ at
+org.scijava.service.ServiceHelper.createServiceRecursively(ServiceHelper.java:353)
+at
+org.scijava.service.ServiceHelper.createExactService(ServiceHelper.java:269)
+ at org.scijava.service.ServiceHelper.loadService(ServiceHelper.java:231)
+at
+org.scijava.service.ServiceHelper.createServiceRecursively(ServiceHelper.java:340)
+ at
+org.scijava.service.ServiceHelper.createExactService(ServiceHelper.java:269)
+at org.scijava.service.ServiceHelper.loadService(ServiceHelper.java:231)
+ at org.scijava.service.ServiceHelper.loadService(ServiceHelper.java:194)
+at org.scijava.service.ServiceHelper.loadServices(ServiceHelper.java:166)
+ at org.scijava.Context.&lt;init&gt;(Context.java:244)
+at org.scijava.Context.&lt;init&gt;(Context.java:203)
+ at org.scijava.Context.&lt;init&gt;(Context.java:142)
+at org.scijava.Context.&lt;init&gt;(Context.java:98)
+ at org.scijava.Context.&lt;init&gt;(Context.java:86)
+at net.imagej.ImageJ.&lt;init&gt;(ImageJ.java:82)
+ at net.imagej.Main.launch(Main.java:61)
+at net.imagej.Main.main(Main.java:73)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+ at
+sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+at
+sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+ at java.lang.reflect.Method.invoke(Method.java:597)
+at net.imagej.launcher.ClassLauncher.launch(ClassLauncher.java:258)
+ at net.imagej.launcher.ClassLauncher.run(ClassLauncher.java:184)
+at net.imagej.launcher.ClassLauncher.main(ClassLauncher.java:76)
+
+
+
+
+
+
+Best regards,
+Md Abdul Kader Sagar
+
+Graduate Student
+*Department of Electrical and Computer Engineering*
+
+Research Assistant
+*Laboratory of Optical and Computational Instrumentation (LOCI)*
+
+*University of Wisconsin-Madison*
+
+LinkedIn: <A HREF="https://www.linkedin.com/in/aksagar">https://www.linkedin.com/in/aksagar</A>
+Cell: +1 608 572 9299
+*Email*:<A HREF="http://loci.wisc.edu/mailman/listinfo/slim-curve">abdul.kader.sagar at gmail.com</A>
+<A HREF="http://loci.wisc.edu/mailman/listinfo/slim-curve">msagar at wisc.edu</A>
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: &lt;<A HREF="http://loci.wisc.edu/pipermail/slim-curve/attachments/20140814/0aea339f/attachment.html">http://loci.wisc.edu/pipermail/slim-curve/attachments/20140814/0aea339f/attachment.html</A>&gt;
+</PRE>
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	
+	<LI>Next message: <A HREF="000002.html">[SLIM-Curve] Slim plugin giving error every time
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#1">[ date ]</a>
+              <a href="thread.html#1">[ thread ]</a>
+              <a href="subject.html#1">[ subject ]</a>
+              <a href="author.html#1">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="http://loci.wisc.edu/mailman/listinfo/slim-curve">More information about the SLIM-Curve
+mailing list</a><br>
+</body></html>

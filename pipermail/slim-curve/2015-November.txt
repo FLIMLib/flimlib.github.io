@@ -1,0 +1,59 @@
+From paul.barber at oncology.ox.ac.uk  Mon Nov  2 06:35:47 2015
+From: paul.barber at oncology.ox.ac.uk (Paul Barber)
+Date: Mon, 2 Nov 2015 12:35:47 +0000
+Subject: [SLIM-Curve] parameter differences between FIJI an SPCImage5
+In-Reply-To: <487442075.7487753.1445946053260.JavaMail.zimbra@mpi-cbg.de>
+References: <487442075.7487753.1445946053260.JavaMail.zimbra@mpi-cbg.de>
+Message-ID: <563758A3.9000903@oncology.ox.ac.uk>
+
+Dear Keliya,
+
+Transient start should be near the rise of the transient.
+Data start marks the data to be used for the fit and should be at the 
+top of the transient or just after.
+Transient end should be as large as possible, but exclude any strange 
+data at the end to the time period.
+The total time period should be at least 8 times the expected lifetime, 
+if possible.
+Threshold should be set to save time by not processing background pixels 
+and its value will vary depending on your experiment. Set it at maybe 20 
+photon counts.
+
+You should fix these cursors and threshold for a given data set. Usually 
+you are looking for a change in lifetime so the absolute lifetime value 
+is not critical.
+
+Hope that helps,
+Paul.
+
+On 27/10/2015 11:40, Keliya Bai wrote:
+> Hello,
+>
+> The Photon Counting device I use, uses SPCImage5.0 to collect data (.sdt).
+> I noticed that when opening files, FIJI Slim Curve usually sets the transient end time as 230 (display as indices), in comparison to SPCImage5.0 T2 value, usually sets to 240.
+>
+> I want to know what settings I should have, as well as what the Data Start value means.
+>
+> When I leave Transient End value and Data Start value alone, only changing Transient Start value, my lifetime value does not change.
+> But when I do the other way round, the T(lifetime) value changes a lot.
+> This makes me wonder what to set for these parameters (Transient Start, Data Start, Transient End, Threshold) for my Photon Counting documents.
+>
+> I'd be very much appreciated if you could help me with a better understanding of the logarithm behind the program, which I didn't get enough from the website, http://fiji.sc/SLIM_Curve.
+>
+> Thank you very much.
+> Looking forward to your reply.
+>
+> Best wishes,
+> Keliya Bai
+>
+> _______________________________________________
+> SLIM-Curve mailing list
+> SLIM-Curve at imagej.net
+> http://loci.wisc.edu/mailman/listinfo/slim-curve
+
+-- 
+Dr Paul R Barber
+CRUK/MRC Oxford Institute for Radiation Oncology
+
+
+
