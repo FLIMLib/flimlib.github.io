@@ -8,7 +8,7 @@
     <meta name="author" content="">
     <link rel="shortcut icon" href="ico/favicon.ico">
 
-    <title>SLIM Curve</title>
+    <title>FLIMLib</title>
 
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -37,15 +37,15 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">SLIM Curve</a>
+          <a class="navbar-brand" href="#">FLIMLib</a>
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
             <li class="active"><a href="#">Home</a></li>
-            <li><a href="https://github.com/slim-curve/slim-curve/wiki">Wiki</a></li>
-            <li><a href="https://github.com/slim-curve">Source</a></li>
+            <li><a href="https://github.com/FLIMLib/flimlib/wiki">Wiki</a></li>
+            <li><a href="https://github.com/FLIMLib">Source</a></li>
             <li><a href="/pipermail/slim-curve/">Archives</a></li>
-            <li><a href="https://forum.image.sc/tags/slim-curve">Help</a></li>
+            <li><a href="https://forum.image.sc/tags/flimj">Help</a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
@@ -56,9 +56,9 @@
       <!-- Main jumbotron for a primary marketing message or call to action -->
       <div class="jumbotron">
         <img src="logo.png" class="logo" alt="logo">
-        <h1>SLIM Curve</h1>
+        <h1>FLIMLib</h1>
         <p>An exponential curve fitting library used for Fluorescent Lifetime
-        Imaging (FLIM) and Spectral Lifetime Imaging (SLIM).</p>
+        Imaging (FLIM).</p>
         <p>
         <a href="#source" class="btn btn-info btn-lg" role="button">Source &raquo;</a>
         <a href="#tri2" class="btn btn-primary btn-lg" role="button">TRI2 &raquo;</a>
@@ -67,38 +67,33 @@
       </div>
 
       <div class="well">
-        <p>SLIM Curve is developed by Paul Barber and the Advanced Technology
-        Group at the <a href="http://www.rob.ox.ac.uk/">Cancer Research UK and
-        Medical Research Council Oxford Institute for Radiation Oncology</a> at
-        the University of Oxford, as well as the <a
-        href="http://loci.wisc.edu/">Laboratory for Optical and Computational
-        Instrumentation</a> (LOCI) at the University of Wisconsin-Madison. SLIM
-        Curve is used for FLIM functionality in the Advanced Technology Group's
+        <p>FLIMLib is developed by Paul Barber and the Advanced Technology
+        Group at the [Oxford Institute for Radiation
+        Oncology](https://www.oncology.ox.ac.uk/), University of Oxford, as
+        well as the <a href="http://loci.wisc.edu/">Laboratory for Optical and
+        Computational Instrumentation</a> (LOCI) at the University of
+        Wisconsin-Madison. FLIMLib is used for FLIM functionality in the 
         <a href="https://www.assembla.com/spaces/ATD_TRI/wiki/Home">Time
-        Resolved Imaging</a> (TRI2) software, as well as in the <a
-        href="http://imagej.net/SLIM_Curve">SLIM Curve plugin for ImageJ</a>.</p>
+        Resolved Imaging</a> (TRI2) software, as well as in the
+        <a href="http://imagej.net/FLIMJ">FLIMJ plugin for ImageJ</a>.</p>
       </div>
 
       <div id="source" class="page-header">
         <h1>Source</h1>
       </div>
       <p>
-      SLIM Curve is an open source project licensed under the <a
+      FLIMLib is an open source project licensed under the <a
       href="http://www.gnu.org/licenses/gpl.html">GNU General Public
       License</a> v3 or later.
       </p>
       <p>
-      The SLIM Curve library code is written in C89 compatible C and is
+      The FLIMLib library code is written in C89 compatible C and is
       thread-safe for fitting multiple pixels concurrently. Several files are
       provided as wrappers to call the library from Java code:
       <code>EcfWrapper.c</code> and <code>.h</code> provide a subset of
-      f/unction calls used by the SLIM Curve ImageJ plugin, these may be invoked
-      directly from Java using JNA. In addition there is a Java CurveFitter
-      project that provides a wrapper to the SLIM Curve code. This invokes the
-      C code using JNI, with <code>loci_curvefitter_SLIMCurveFitter.c</code>
-      and <code>.h</code>.
+      function calls used by the FLIMJ plugin for ImageJ.
       </p>
-      <a href="https://github.com/slim-curve" class="btn btn-default btn-lg" role="button">See the code &raquo;</a>
+      <a href="https://github.com/FLIMLib" class="btn btn-default btn-lg" role="button">See the code &raquo;</a>
       <a href="http://code.imagej.net/slim-curve/html/" class="btn btn-default btn-lg" role="button">Read the docs &raquo;</a>
 
       <div id="tri2" class="page-header">
@@ -106,8 +101,8 @@
       </div>
       <img src="TRI2.png" style="float: right; width: 400px" class="img-thumbnail" alt="TRI2">
       <p>
-      TRI2 is a Windows application that uses SLIM Curve to analyze
-      fluorescence lifetime microscopy (FLIM) data.
+      TRI2 is a Windows application that uses FLIMLib to analyze fluorescence
+      lifetime microscopy (FLIM) data.
       <p>
       Originally named 'Time Resolved Imaging', TRI2 not only incorporates
       processing for time-domain FLIM data but also for RGB spectral unmixing,
@@ -122,7 +117,7 @@
       development.
       </p>
       <p>
-      The core fitting routines from TRI2 are now open source in the SLIM Curve
+      The core fitting routines from TRI2 are now open source in the FLIMLib
       library. These include RLD, Levenberg-Marquardt and non-negative least
       squares. The library is written in C but has wrappers for Java.
       </p>
@@ -133,16 +128,16 @@
       </div>
       <img src="SLIM-Curve-plugin.png" style="float: right; width: 400px" class="img-thumbnail" alt="SLIM Curve plugin">
       <p>
-      The SLIM Curve plugin for ImageJ provides the ability to analyze FLIM and
-      SLIM data within ImageJ, using the SLIM Curve library. The plugin can be
-      installed into the <a href="http://fiji.sc/">Fiji distribution of
-      ImageJ</a> simply by enabling the "SLIM Curve" <a
+      The FLIMJ plugin for ImageJ provides the ability to analyze FLIM
+      data within ImageJ, using the FLIMLib library. The plugin can be
+      installed into the <a href="https://fiji.sc/">Fiji distribution of
+      ImageJ</a> simply by enabling the FLIMJ <a
       href="http://imagej.net/Update_Sites">update site</a>.
       Features include:
       <p>
       <ul>
       <li>Fit individual pixels, entire images per-pixel, or do single fits for
-      entire images, using SLIM Curve's rapid lifetime determination (RLD),
+      entire images, using FLIMLib's rapid lifetime determination (RLD),
       Levenberg-Marquardt (LM) or hybrid (RLD+LM) fitting algorithms</li>
       <li>Single, double and triple exponential fits, as well as stretched
       exponential fits</li>
@@ -161,7 +156,7 @@
       of an ImageJ macro or scripting workflow</li>
       </ul>
       </p>
-      <a href="http://imagej.net/SLIM_Curve" class="btn btn-default btn-lg" role="button">Read more &raquo;</a>
+      <a href="https://imagej.net/FLIMJ" class="btn btn-default btn-lg" role="button">Read more &raquo;</a>
 
     </div> <!-- /container -->
 
